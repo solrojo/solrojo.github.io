@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '@/components/Header'
 import Content from '@/components/Content'
 import Footer from '@/components/Footer'
+import Pyro from '@/components/Pyro'
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+
+      {/* <Pyro /> */}
 
       <div className="grid">
         <header className="grid-item header">

@@ -7,11 +7,6 @@ const evidence: LinkObject[] = [
     text: 'https://vot-tak.tv/novosti/04-04-2022-bucha'
   },
   {
-    id: 2,
-    href: 'https://acute-biggies-669581.appspot.com/article/2022/04/04/bucha_photo"',
-    text: 'https://acute-biggies-669581.appspot.com/article/2022/04/04/bucha_photo"'
-  },
-  {
     id: 3,
     href: 'https://meduza.io/feature/2022/04/03/bucha-prigorody-kieva-samye-strashnye-kadry-etoy-voyny',
     text: 'https://meduza.io/feature/2022/04/03/bucha-prigorody-kieva-samye-strashnye-kadry-etoy-voyny'

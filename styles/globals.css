@@ -10,11 +10,6 @@
   margin: 0;
 }
 
-iframe {
-  display: "none";
-  visibility: "hidden";
-}
-
 body {
   background: var(--dark);
   font-family: Helvetica, sans-serif;

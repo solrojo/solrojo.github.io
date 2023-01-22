@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-import HeadStat from '@/components/HeadStat'
 import Header from '@/components/Header'
 import Content from '@/components/Content'
 import Footer from '@/components/Footer'
@@ -9,7 +8,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <HeadStat />
         <title>Dmitrii Korchemkin</title>
         <meta name="author" content="Dmitrii Korchemkin" />
         <meta name="description" content="Dmitrii Korchemkin's website" />

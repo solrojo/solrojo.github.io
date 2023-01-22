@@ -1,0 +1,64 @@
+.content {
+  color: #2c3e50;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 1.2rem;
+}
+
+.content a {
+  color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+.contentSection {
+  padding-bottom: 2.2rem;
+}
+
+.contentSection:last-child {
+  padding-bottom: 0;
+}
+
+.flag {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 2.2rem;
+  padding: 1rem;
+  background: linear-gradient(to bottom, rgba(0, 91, 187, 1) 50%, rgba(255, 213, 0, 1) 50%);
+  height: 30vh;
+}
+
+.contentlinks {
+  list-style: none;
+}
+
+.contentlinksItem {
+  margin-bottom: 1.2rem;
+}
+
+.statement {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+  text-shadow: 2px 2px #2c3e50;
+}
+
+.statement:after {
+  content: "NO WAR!";
+  animation: spin 10s infinite;
+}
+
+@keyframes spin {
+  0% {
+    content: "NO WAR!";
+  }
+
+  50% {
+    content: "НЕТ ВОЙНЕ!";
+  }
+
+  75% {
+    content: "¡NO A LA GUERRA!";
+  }
+}

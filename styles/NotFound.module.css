@@ -1,0 +1,46 @@
+.container {
+  padding: 10px;
+  background: var(--dark);
+  min-height: 100vh;
+}
+
+.back {
+  color: var(--white);
+  border: 4px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 3vw;
+  z-index: 1;
+  animation: back-shadow  1.0s forwards;
+}
+
+.back:active {
+  border-color: var(--white);
+}
+
+.header {
+  color: var(--white);
+  font-family: serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  font-size: 45vw;
+  line-height: 1;
+  user-select: none;
+  text-align: right;
+  animation: header-shadow 1.0s forwards;
+}
+
+@keyframes back-shadow {
+  100% {
+    text-shadow: 1vw 1vw var(--light);
+  }
+}
+
+@keyframes header-shadow {
+  100% {
+    text-shadow: 4vw 3vw var(--light);
+  }
+}

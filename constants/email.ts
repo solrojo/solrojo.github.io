@@ -1,0 +1,1 @@
+export default 'mail@kda.name'

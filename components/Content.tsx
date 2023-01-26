@@ -2,7 +2,7 @@ import styles from '@/styles/Content.module.css'
 import List from '@/components/List'
 import evidence from '@/constants/evidence'
 
-export default function Content() {
+const Content = () => {
   const listsProps = {
     listClass: styles.contentlinks,
     listItemClass: styles.contentlinksItem,
@@ -38,3 +38,5 @@ export default function Content() {
     </div>
   )
 }
+
+export default Content

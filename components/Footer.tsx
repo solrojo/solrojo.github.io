@@ -1,11 +1,5 @@
 import email from '@/constants/email'
 
-export default function Footer() {
-  const href = `mailto:${email}`
+const Footer = () => <a href={`mailto:${email}`}>{email}</a>
 
-  return (
-    <>
-      <a href={href}>{email}</a>
-    </>
-  )
-}
+export default Footer

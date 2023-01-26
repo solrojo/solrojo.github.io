@@ -2,7 +2,7 @@ import styles from '@/styles/Header.module.css'
 import List from '@/components/List'
 import socialMediaLinks from '@/constants/socialMediaLinks'
 
-export default function Header() {
+const Header = () => {
   const listsProps = {
     listClass: styles.contacts,
     listItemClass: styles.contactsItem,
@@ -15,3 +15,5 @@ export default function Header() {
     </nav>
   )
 }
+
+export default Header

@@ -28,10 +28,7 @@ console.log('Source file successfully read.')
 
 try {
   console.log('Writing to output file...')
-  fs.writeFileSync(outputFilePath, JSON.stringify({
-    updated_at: Date.now(),
-    phrases,
-  }));
+  fs.writeFileSync(outputFilePath, JSON.stringify(phrases));
 } catch (err) {
   console.error(err);
 }

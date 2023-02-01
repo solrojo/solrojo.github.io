@@ -1,16 +1,13 @@
 const fs = require('fs');
+const minimist = require('minimist');
 
-const argv = process.argv.slice(2);
-const sourceCommandIndex = argv.findIndex((item) => item === '-f');
-const outputCommandIndex = argv.findIndex((item) => item === '-o');
-const sourceFilePath = argv[sourceCommandIndex + 1];
-const outputFilePath = argv[outputCommandIndex + 1];
+const argv = minimist(process.argv);
 let phrases = [];
 
 try {
   console.log('Reading a source file...')
 
-  const data = fs.readFileSync(sourceFilePath, 'utf8');
+  const data = fs.readFileSync(argv.f, 'utf8');
   const lines = data.split('\n');
 
   phrases = lines.filter(item => Boolean(item)).map((item) => {
@@ -28,7 +25,7 @@ console.log('Source file successfully read.')
 
 try {
   console.log('Writing to output file...')
-  fs.writeFileSync(outputFilePath, JSON.stringify(phrases));
+  fs.writeFileSync(argv.o, JSON.stringify(phrases));
 } catch (err) {
   console.error(err);
 }

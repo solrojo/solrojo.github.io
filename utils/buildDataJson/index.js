@@ -7,16 +7,16 @@ let phrases = [];
 try {
   console.log('Reading a source file...')
 
-  const data = fs.readFileSync(argv.f, 'utf8');
-  const lines = data.split('\n');
-
-  phrases = lines.filter(item => Boolean(item)).map((item) => {
-    const arr = item.split(':');
-    return {
-      phrase: arr[0].trim(),
-      ru: arr[1].trim()
-    };
-  });
+  phrases = fs.readFileSync(argv.f, 'utf8')
+    .split('\n')
+    .filter(item => Boolean(item))
+    .map(item => {
+      const found = item.match(/\[.+\]/g);
+      return found
+        ? found.join().replace(/\[|\]/g, '').split(' ').map(el => item.replace(found, el))
+        : item
+    })
+    .flat();
 } catch (err) {
   console.error(err);
 }

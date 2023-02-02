@@ -16,7 +16,18 @@ try {
         ? found.join().replace(/\[|\]/g, '').split(' ').map(el => item.replace(found, el))
         : item
     })
-    .flat();
+    .flat()
+    .map((item) => {
+      const arr = item.split(':');
+      return {
+        phrase: arr[0].trim(),
+        ru: arr[1].trim()
+      };
+    });
+
+    if (!(phrases[0].hasOwnProperty('phrase') && phrases[0].hasOwnProperty('ru'))) {
+      throw new Error('Incorrect phrases object type');
+    }
 } catch (err) {
   console.error(err);
 }

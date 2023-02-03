@@ -1,14 +1,8 @@
 import styles from '@/styles/Content.module.css'
-import List from '@/components/List'
-import evidence from '@/constants/evidence'
+import Image from 'next/image'
+import { inmate } from '@/constants/image'
 
 const Content = () => {
-  const listsProps = {
-    listClass: styles.contentlinks,
-    listItemClass: styles.contentlinksItem,
-    list: evidence
-  }
-
   return (
     <div className={styles.content}>
       <section className={styles.contentSection}>
@@ -30,10 +24,13 @@ const Content = () => {
       </section>
 
       <section className={styles.contentSection}>
-        <article>
-          <h2>Evidence of military crimes</h2>
-          <List {...listsProps} />
-        </article>
+        <Image
+          src={inmate}
+          alt="Inmate"
+          width={300}
+          height={300}
+          className={styles.image}
+        />
       </section>
     </div>
   )

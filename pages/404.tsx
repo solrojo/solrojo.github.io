@@ -5,8 +5,8 @@ const NotFound = () => (
   <>
     <div className={styles.wallpaper}></div>
     <div className={styles.container}>
-      <Link href="/" className={styles.back}>Go to main page</Link>
       <h1 className={styles.header}>404</h1>
+      <Link href="/" className={styles.back}>Go to main page</Link>
     </div>
   </>
 )

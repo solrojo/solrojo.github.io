@@ -1,13 +1,6 @@
 .content {
-  color: #2c3e50;
-  background: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   padding: 1.2rem;
-}
-
-.content a {
-  color: #2c3e50;
-  border-color: #2c3e50;
 }
 
 .contentSection {
@@ -30,7 +23,6 @@
 }
 
 .image {
-  /* border-radius: 50%; */
   display: inline-block;
   width: 100%;
   height: auto;
@@ -38,9 +30,9 @@
 
 .statement {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
-  color: var(--white);
+  color: var(--clouds);
   text-shadow: 2px 2px #2c3e50;
 }
 

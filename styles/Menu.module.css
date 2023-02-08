@@ -1,0 +1,33 @@
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  z-index: 1;
+  background: var(--light);
+  color: var(--dark);
+  border-left: 2px solid var(--dark);
+  padding: 0 var(--spacer);
+  width: 300px;
+  transform: translate3d(300px, 0, 0);
+  transition: transform var(--one-third-second);
+}
+
+.navOpened {
+  transform: translate3d(0, 0, 0);
+}
+
+.navHeader {
+  margin-bottom: var(--spacer-double);
+  border-bottom: 2px solid var(--dark);
+}
+
+.navList {
+  list-style: none;
+}
+
+.navItem {
+  padding: var(--spacer);
+  display: block;
+  margin-bottom: var(--spacer);
+}

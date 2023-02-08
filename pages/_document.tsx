@@ -4,7 +4,6 @@ import Script from 'next/script'
 export default () => (
   <Html lang="en">
     <Head>
-      <title>Dmitrii Korchemkin</title>
       <meta name="author" content="Dmitrii Korchemkin" />
       <meta name="description" content="Dmitrii Korchemkin's website" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

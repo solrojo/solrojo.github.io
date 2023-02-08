@@ -1,19 +1,24 @@
-import styles from '@/styles/Header.module.css'
-import List from '@/components/List'
-import socialMediaLinks from '@/constants/socialMediaLinks'
+import { ReactNode } from 'react'
+import PropTypes from 'prop-types'
+import Logo from '@/components/Logo'
+import Menu from '@/components/Menu'
 
-const Header = () => {
-  const listsProps = {
-    listClass: styles.contacts,
-    listItemClass: styles.contactsItem,
-    list: socialMediaLinks
-  }
+type Props = {
+  children?: ReactNode
+}
 
+const Header = ({ children }: Props) => {
   return (
-    <nav>
-      <List {...listsProps} />
-    </nav>
+    <>
+      <Logo />
+      <div>{ children }</div>
+      <Menu />
+    </>
   )
+}
+
+Header.propTypes = {
+  children: PropTypes.node
 }
 
 export default Header

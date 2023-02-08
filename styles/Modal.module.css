@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: auto var(--grid-item-size);
+  grid-template-areas:
+    "header"
+    "content";
+  transform: translate3d(0, 100vh, 0);
+  transition: transform var(--one-third-second);
+  z-index: 999;
+  padding: 0 var(--spacer-double);
+}
+
+.modalHeader {
+  grid-area: header;
+  color: var(--light);
+  text-align: right;
+}
+
+.modalContent {
+  grid-area: content;
+  background: var(--light);
+  border-radius: var(--spacer) var(--spacer) 0 0;
+  overflow: auto;
+}
+
+.modalOpened {
+  transform: translate3d(0, 0, 0);
+  animation: blackout 1s forwards;
+}
+
+@keyframes blackout {
+  100% {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}

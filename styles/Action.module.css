@@ -5,10 +5,12 @@
   transition: transform var(--one-part-second);
   padding: var(--spacer);
   cursor: pointer;
+  line-height: 1;
+  text-align: center;
 }
 
 .element:active {
-  transform: scale3d(.9, .9, .9);
+  transform: scale3d(.95, .95, .95);
 }
 
 .element:disabled {
@@ -16,7 +18,7 @@
 }
 
 .elementWithBg {
-  border-radius: calc(var(--spacer) / 2);
+  border-radius: var(--spacer);
   background: var(--dark);
-  background: linear-gradient(-90deg, var(--dark), transparent);
+  background: linear-gradient(to right, transparent, var(--dark));
 }

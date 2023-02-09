@@ -10,6 +10,7 @@
     "header"
     "content";
   z-index: 999;
+  background: var(--dark);
 }
 
 .header {
@@ -20,22 +21,7 @@
 
 .content {
   grid-area: content;
-  background: var(--dark);
-  background: linear-gradient(90deg, var(--dark), transparent);
-  border-radius: var(--spacer) var(--spacer) 0 0;
   overflow: auto;
-}
-
-@keyframes blackout {
-  100% {
-    background: var(--dark);
-  }
-}
-
-@keyframes whiteout {
-  100% {
-    background: transparent;
-  }
 }
 
 .enter {
@@ -49,13 +35,10 @@
 
 .enterDone {
   transform: translate3d(0, 0, 0);
-  animation: blackout var(--one-third-second) forwards;
 }
 
 .exit {
   transform: translate3d(0, 0, 0);
-  background: var(--dark);
-  animation: whiteout var(--one-third-second) forwards;
 }
 
 .exitActive {

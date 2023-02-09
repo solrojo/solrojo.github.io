@@ -33,6 +33,7 @@
 
   .text {
     text-align: left;
+    order: 2;
   }
 
   .element {

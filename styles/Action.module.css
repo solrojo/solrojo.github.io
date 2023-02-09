@@ -20,5 +20,5 @@
 .elementWithBg {
   border-radius: var(--spacer-half);
   background: var(--dark);
-  background: linear-gradient(to right, transparent, var(--dark));
+  background: linear-gradient(to right, transparent, var(--dark), transparent) no-repeat;
 }

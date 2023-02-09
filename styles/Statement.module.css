@@ -25,7 +25,7 @@
   background-size: cover;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .container {
     grid-template-rows: none;
     grid-template-columns: var(--grid-item-size) var(--grid-item-size);

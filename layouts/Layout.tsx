@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Header from '@/components/Header'
 import Modal from '@/components/Modal'
 import Statement from '@/components/Statement'
+import { ActionBtn } from '@/components/Action'
 
 type Props = {
   children: ReactNode
@@ -16,13 +17,12 @@ const Layout = ({ children }: Props) => {
       <div className="grid">
         <header className="header slide-down">
           <Header>
-            <button
-              type="button"
+            <ActionBtn
               onClick={() => setModalVisibility(true)}
               disabled={isModalVisible}
             >
               #standwithukraine
-            </button>
+            </ActionBtn>
           </Header>
         </header>
 

@@ -1,0 +1,9 @@
+.container {
+  padding: var(--spacer-double);
+  display: grid;
+  grid-template-columns: var(--grid-item-size);
+  place-items: center;
+  place-content: center;
+  gap: var(--spacer);
+  height: 100%;
+}

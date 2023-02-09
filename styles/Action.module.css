@@ -1,0 +1,22 @@
+.element {
+  display: inline-block;
+  background: none;
+  border: 0;
+  transition: transform var(--one-part-second);
+  padding: var(--spacer);
+  cursor: pointer;
+}
+
+.element:active {
+  transform: scale3d(.9, .9, .9);
+}
+
+.element:disabled {
+  opacity: 0.5;
+}
+
+.elementWithBg {
+  border-radius: calc(var(--spacer) / 2);
+  background: var(--dark);
+  background: linear-gradient(-90deg, var(--dark), transparent);
+}

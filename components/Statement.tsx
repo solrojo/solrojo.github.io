@@ -1,3 +1,4 @@
+import { ActionLinkExternal } from '@/components/Action'
 import styles from '@/styles/Statement.module.css'
 
 export default () => (
@@ -5,13 +6,9 @@ export default () => (
     <div className={styles.image}></div>
 
     <div className={styles.text}>
-      <a
-        href="https://u24.gov.ua"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <ActionLinkExternal href="https://u24.gov.ua" cssClass={styles.element}>
         Stand with 🇺🇦Ukraine
-      </a>
+      </ActionLinkExternal>
     </div>
   </div>
 )

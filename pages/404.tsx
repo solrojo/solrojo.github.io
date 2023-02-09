@@ -1,18 +1,16 @@
 import Head from 'next/head'
-import Link from 'next/link';
+import styles from '@/styles/NotFound.module.css'
+import { ActionLink } from '@/components/Action'
 
 export default () => (
   <>
     <Head>
-      <title>404 page not found</title>
+      <title>404 Page not found</title>
     </Head>
 
-    <div className="t-center">
-      <h1>404</h1>
-      <Link href="/">
-        <button type="button">Go to main page</button>
-      </Link>
+    <div className={styles.container}>
+      <h2>Page not found</h2>
+      <ActionLink href="/" withBg>Go to main page</ActionLink>
     </div>
-    <div></div>
   </>
 )

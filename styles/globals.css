@@ -1,12 +1,12 @@
 :root {
-  --dark: black;
-  --light: white;
+  --dark: #02032a;
+  --light: #fff;
   --spacer: 1rem;
   --spacer-double: 2rem;
   --grid-item-size: 1fr;
-  --one-part-second: 0.1s;
-  --one-third-second: 0.3s;
-  --half-second: 0.5s;
+  --one-part-second: .1s;
+  --one-third-second: .3s;
+  --half-second: .5s;
 }
 
 * {
@@ -15,15 +15,17 @@
   margin: 0;
   text-transform: uppercase;
   font-family: sans-serif;
-  font-weight: 700;
-  line-height: 100%;
-  font-size: var(--spacer);
+  font-weight: 100;
+  letter-spacing: .1rem;
+  line-height: 1;
+  font-size: 1rem;
   color: inherit;
+  overflow-wrap: break-word;
 }
 
 body {
-  background: var(--light);
-  color: var(--dark);
+  background: var(--dark) url('/img/acid-bg.png') no-repeat;
+  color: var(--light);
   font-size: 22px;
 }
 
@@ -38,53 +40,25 @@ body {
 
 .header {
   grid-area: header;
-  display: grid;
-  grid-auto-flow: column;
-  place-items: center;
-  place-content: space-between;
-  gap: var(--spacer);
-  border-bottom: 2px solid var(--dark);
+  position: relative;
   z-index: 1;
 }
 
 .main {
   grid-area: main;
-  padding: var(--spacer-double);
-  display: grid;
-  grid-template-columns: var(--grid-item-size) var(--grid-item-size);
-  place-items: center;
-  place-content: center;
-  gap: var(--spacer);
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 6vw;
 }
 
 h2 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 3vw;
+  margin-bottom: 3rem;
 }
 
 a {
-  transition: transform var(--one-part-second);
   text-decoration: none;
-}
-
-button {
-  background: none;
-  border: 0;
-  transition: transform var(--one-part-second);
-  padding: var(--spacer);
-}
-
-a:active,
-button:active {
-  transform: scale3d(0.9, 0.9, 0.9);
-}
-
-button:disabled {
-  opacity: 0.5;
 }
 
 .slide-down {
@@ -107,8 +81,4 @@ button:disabled {
   100% {
     transform: scale3d(1, 1, 1);
   }
-}
-
-.t-center {
-  text-align: center;
 }

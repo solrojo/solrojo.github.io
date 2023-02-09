@@ -1,45 +1,51 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import links from '@/constants/links'
 import List from '@/components/List'
+import { ActionBtn } from '@/components/Action'
 import styles from '@/styles/Menu.module.css'
 
 const Menu = () => {
   const [iVisible, setVisibility] = useState(false)
-
-  const navAttrs = {
-    className: `${styles.nav} ${iVisible ? styles.navOpened : ''}`
-  }
-
-  const listsProps = {
-    list: links,
-    listClass: styles.navList,
-    listItemClass: styles.navItem
-  }
+  const nodeRef = useRef(null);
 
   return (
-    <div>
-      <button
-        type="button"
-        className={styles.menuBtn}
+    <>
+      <ActionBtn
         disabled={iVisible}
         onClick={() => setVisibility(true)}
       >
-          Menu
-        </button>
+        Menu
+      </ActionBtn>
 
-      <nav {...navAttrs}>
-        <div className={styles.navHeader}>
-          <button
-            type="button"
-            onClick={() => setVisibility(false)}
-            >
+      <CSSTransition
+        nodeRef={nodeRef}
+        in={iVisible}
+        timeout={300}
+        classNames={{
+          enter: styles.enter,
+          enterActive: styles.enterActive,
+          enterDone: styles.enterDone,
+          exit: styles.exit,
+          exitActive: styles.exitActive
+        }}
+        unmountOnExit
+      >
+        <nav ref={nodeRef} className={styles.container}>
+          <div className={styles.header}>
+            <ActionBtn onClick={() => setVisibility(false)}>
               Close
-          </button>
-        </div>
+            </ActionBtn>
+          </div>
 
-        <List {...listsProps} />
-      </nav>
-    </div>
+          <List
+            list={links}
+            listClass={styles.list}
+            listItemClass={styles.item}
+          />
+        </nav>
+      </CSSTransition>
+    </>
   )
 }
 

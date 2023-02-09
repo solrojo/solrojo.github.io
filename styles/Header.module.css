@@ -1,0 +1,8 @@
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  place-content: space-between;
+  gap: var(--spacer);;
+  z-index: 1;
+}

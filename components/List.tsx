@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types'
 import { LinkObject, ListsProps } from '@/constants/types'
+import { ActionLinkExternal } from '@/components/Action'
 
 const List = ({ list, listClass, listItemClass }: ListsProps) => (
   <ul className={listClass}>
     {list.map((item: LinkObject) =>
         <li key={item.id}>
-          <a
+          <ActionLinkExternal
             href={item.href}
-            target="_blank"
-            rel="noreferrer"
-            className={listItemClass}
+            cssClass={listItemClass}
           >
             {item.text}
-          </a>
+          </ActionLinkExternal>
         </li>
     )}
   </ul>

@@ -3,13 +3,6 @@
   display: grid;
   gap: var(--spacer);
   height: 100%;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .container {
-    text-align: left;
-  }
 }
 
 @media (min-width: 1024px) {

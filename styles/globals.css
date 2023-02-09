@@ -26,7 +26,10 @@
 }
 
 body {
-  background: var(--dark) url('/img/acid-bg.png') center fixed;
+  background-color: var(--dark);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   color: var(--light);
   font-size: 16px;
@@ -35,6 +38,15 @@ body {
   letter-spacing: .1rem;
   line-height: 2;
 }
+
+@media (max-width: 480px) {
+  body { background-image: url(/img/bg-mobile.png); }
+}
+
+@media (min-width: 481px) {
+  body { background-image: url(/img/bg-desktop.png); }
+}
+
 
 h1 {
   font-size: 2rem;

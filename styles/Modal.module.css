@@ -11,6 +11,7 @@
     "content";
   z-index: 999;
   background: var(--dark);
+  background: linear-gradient(-190deg, var(--dark) 70%, var(--accent)) no-repeat;
 }
 
 .header {

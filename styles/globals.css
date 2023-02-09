@@ -26,12 +26,12 @@
 }
 
 body {
-  background: var(--dark) url('/img/acid-bg.png') center no-repeat;
+  background: var(--dark) url('/img/acid-bg.png') center fixed;
   background-size: cover;
   color: var(--light);
   font-size: 16px;
   font-family: sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: .1rem;
   line-height: 2;
 }
@@ -55,7 +55,7 @@ a {
 
 .banner {
   background: var(--dark);
-  background: linear-gradient(to bottom, var(--dark), transparent);
+  background: linear-gradient(to bottom, var(--dark), transparent) no-repeat;
   text-align: center;
 }
 
@@ -66,7 +66,7 @@ a {
     "header"
     "main";
   min-height: 100vh;
-  background: linear-gradient(120deg, var(--dark), transparent);
+  background: linear-gradient(120deg, var(--dark), transparent) no-repeat;
 }
 
 .header {

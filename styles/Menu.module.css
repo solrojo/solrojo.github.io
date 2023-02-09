@@ -5,10 +5,10 @@
   right: 0;
   bottom: 0;
   background: var(--dark);
-  background: linear-gradient(190deg, var(--dark) 60%, var(--accent));
+  background: linear-gradient(190deg, var(--dark) 60%, var(--accent)) no-repeat;
   color: var(--light);
   padding: var(--spacer);
-  min-width: 25vw;
+  min-width: 50vw;
 }
 
 .header {
@@ -53,10 +53,15 @@
   .container {
     left: inherit;
     padding-left: var(--spacer-double);
-    min-width: 50vw;
   }
 
   .list {
     text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    min-width: 25vw;
   }
 }

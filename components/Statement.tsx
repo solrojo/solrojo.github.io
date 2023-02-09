@@ -4,7 +4,7 @@ import styles from '@/styles/Statement.module.css'
 export default () => (
   <div className={styles.container}>
     <div className={styles.text}>
-      <p className={styles.element}>Stand with Ukraine</p>
+      <p className={styles.element}>Stand with Ukraine 🇺🇦</p>
       <ActionLinkExternal href="https://u24.gov.ua">u24.gov.ua</ActionLinkExternal>
     </div>
 

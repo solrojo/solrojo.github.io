@@ -21,4 +21,8 @@
   border-radius: var(--spacer-half);
   background: var(--dark);
   background: linear-gradient(to right, transparent, var(--dark), transparent) no-repeat;
+  margin: 0 var(--spacer-half);
+  padding: .8rem;
+  border: 1px solid var(--light);
+  margin: 0 var(--spacer-half);
 }

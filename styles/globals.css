@@ -50,15 +50,13 @@ body {
 
 h1 {
   font-size: 2rem;
-  line-height: 1;
-  font-weight: 500;
+  line-height: 1.1;
 }
 
 h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1;
-  font-weight: 400;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
 }
 
 a {
@@ -78,7 +76,7 @@ a {
     "header"
     "main";
   min-height: 100vh;
-  background: linear-gradient(120deg, var(--dark), transparent) no-repeat;
+  background: linear-gradient(to right bottom, var(--dark), transparent) no-repeat;
 }
 
 .header {
@@ -96,12 +94,12 @@ a {
 
   h1 {
     font-size: 6rem;
-    font-weight: 100;
+    line-height: 1;
   }
 
   h2 {
     font-size: 3rem;
     margin-bottom: 3rem;
-    font-weight: 100;
+    line-height: 1;
   }
 }

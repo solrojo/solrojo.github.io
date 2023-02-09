@@ -3,12 +3,11 @@ import styles from '@/styles/Statement.module.css'
 
 export default () => (
   <div className={styles.container}>
-    <div className={styles.image}></div>
-
     <div className={styles.text}>
-      <ActionLinkExternal href="https://u24.gov.ua" cssClass={styles.element}>
-        Stand with 🇺🇦Ukraine
-      </ActionLinkExternal>
+      <p className={styles.element}>Stand with Ukraine</p>
+      <ActionLinkExternal href="https://u24.gov.ua">u24.gov.ua</ActionLinkExternal>
     </div>
+
+    <div className={styles.image}></div>
   </div>
 )

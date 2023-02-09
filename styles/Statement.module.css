@@ -1,21 +1,41 @@
 .container {
   display: grid;
-  grid-template-columns: var(--grid-item-size) var(--grid-item-size);
+  grid-template-rows: auto var(--grid-item-size);
   place-items: stretch;
   place-content: stretch;
+  gap: var(--spacer);
   height: 100%;
 }
 
 .text {
-  padding: 2rem;
+  padding: var(--spacer-double);
   align-self: center;
   place-self: center;
+  text-align: center;
 }
 
 .element {
-  font-size: 6rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1;
 }
 
 .image {
   background: url('/img/inmate.png') center no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-rows: none;
+    grid-template-columns: var(--grid-item-size) var(--grid-item-size);
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  .element {
+    font-size: 6rem;
+  }
 }

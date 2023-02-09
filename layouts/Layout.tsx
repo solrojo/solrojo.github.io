@@ -15,18 +15,20 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className="grid">
-        <header className="header slide-down">
-          <Header>
+        <header className="header">
+          <div className="banner">
             <ActionBtn
               onClick={() => setModalVisibility(true)}
               disabled={isModalVisible}
             >
-              #standwithukraine
+              🇺🇦 Stand with Ukraine 🇺🇦
             </ActionBtn>
-          </Header>
+          </div>
+
+          <Header />
         </header>
 
-        <main className="main scale-back">
+        <main className="main">
           { children }
         </main>
       </div>

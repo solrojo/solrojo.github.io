@@ -1,9 +1,17 @@
 .container {
-  padding: var(--spacer-double);
+  padding: var(--spacer-double) var(--spacer);
   display: grid;
-  grid-template-columns: var(--grid-item-size);
+  grid-template-rows: var(--grid-item-size) var(--grid-item-size);
   place-items: center;
   place-content: center;
   gap: var(--spacer);
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--spacer-double);
+    grid-template-rows: none;
+    grid-template-columns: var(--grid-item-size) var(--grid-item-size);
+  }
 }

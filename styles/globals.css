@@ -1,6 +1,7 @@
 :root {
   --dark: #02032a;
   --light: #fff;
+  --accent: #f20c43;
   --spacer: 1rem;
   --spacer-double: 2rem;
   --grid-item-size: 1fr;
@@ -14,19 +15,47 @@
   padding: 0;
   margin: 0;
   text-transform: uppercase;
-  font-family: sans-serif;
-  font-weight: 100;
-  letter-spacing: .1rem;
-  line-height: 1;
-  font-size: 1rem;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  font-size: inherit;
   color: inherit;
-  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 body {
   background: var(--dark) url('/img/acid-bg.png') no-repeat;
+  background-size: cover;
   color: var(--light);
-  font-size: 22px;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: .1rem;
+  line-height: 2;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.banner {
+  background: var(--dark);
+  background: linear-gradient(to bottom, var(--dark), transparent);
+  text-align: center;
 }
 
 .grid {
@@ -40,45 +69,25 @@ body {
 
 .header {
   grid-area: header;
-  position: relative;
-  z-index: 1;
 }
 
 .main {
   grid-area: main;
 }
 
-h1 {
-  font-size: 6vw;
-}
-
-h2 {
-  font-size: 3vw;
-  margin-bottom: 3rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-.slide-down {
-  transform: translate3d(0, -100vh, 0);
-  animation: slide-down var(--half-second) forwards;
-}
-
-@keyframes slide-down {
-  100% {
-    transform: translate3d(0, 0, 0);
+@media (min-width: 768px) {
+  body {
+    line-height: 1;
   }
-}
 
-.scale-back {
-  transform: scale3d(3, 3, 3);
-  animation: scale-back var(--half-second) forwards;
-}
+  h1 {
+    font-size: 6rem;
+    font-weight: 100;
+  }
 
-@keyframes scale-back {
-  100% {
-    transform: scale3d(1, 1, 1);
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 100;
   }
 }

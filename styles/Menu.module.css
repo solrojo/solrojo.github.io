@@ -1,14 +1,13 @@
 .container {
-  position: absolute;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
   background: var(--dark);
   background: linear-gradient(190deg, var(--dark) 60%, var(--accent)) no-repeat;
   color: var(--light);
   padding: var(--spacer);
-  min-width: 50vw;
 }
 
 .header {
@@ -28,7 +27,7 @@
 }
 
 .enter {
-  transform: translate3d(0, -100vh, 0);
+  transform: translate3d(100vw, 0, 0);
 }
 
 .enterActive {
@@ -45,14 +44,16 @@
 }
 
 .exitActive {
-  transform: translate3d(0, -100vh, 0);
+  transform: translate3d(100vw, 0, 0);
   transition: transform var(--one-third-second);
 }
+
 
 @media (min-width: 768px) {
   .container {
     left: inherit;
     padding-left: var(--spacer-double);
+    width: 50vw;
   }
 
   .list {
@@ -62,6 +63,6 @@
 
 @media (min-width: 1024px) {
   .container {
-    min-width: 25vw;
+    width: 25vw;
   }
 }

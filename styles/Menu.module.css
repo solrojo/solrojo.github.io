@@ -8,7 +8,7 @@
   background: linear-gradient(190deg, var(--dark) 60%, var(--accent));
   color: var(--light);
   padding: var(--spacer);
-  min-width: 20vw;
+  min-width: 25vw;
 }
 
 .header {
@@ -28,35 +28,32 @@
 }
 
 .enter {
-  opacity: 0;
-  transform: scale3d(3, 3, 3);
+  transform: translate3d(0, -100vh, 0);
 }
 
 .enterActive {
-  opacity: 1;
-  transform: scale3d(1, 1, 1);
-  transition: opacity var(--one-third-second), transform var(--one-third-second);
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--one-third-second);
 }
 
 .enterDone {
-  opacity: 1;
-  transform: scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0);
 }
 
 .exit {
-  transform: scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0);
 }
 
 .exitActive {
-  opacity: 0;
-  transform: scale3d(3, 3, 3);
-  transition: opacity var(--one-third-second), transform var(--one-third-second);
+  transform: translate3d(0, -100vh, 0);
+  transition: transform var(--one-third-second);
 }
 
 @media (min-width: 768px) {
   .container {
     left: inherit;
     padding-left: var(--spacer-double);
+    min-width: 50vw;
   }
 
   .list {

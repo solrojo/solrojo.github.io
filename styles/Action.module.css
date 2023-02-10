@@ -1,5 +1,5 @@
 .element {
-  display: inline-block;
+  display: inline-grid;
   background: none;
   border: 0;
   transition: transform var(--one-part-second);

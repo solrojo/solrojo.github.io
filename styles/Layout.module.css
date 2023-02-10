@@ -14,7 +14,6 @@
 
 .banner {
   background: var(--dark);
-  background: linear-gradient(to bottom, var(--dark), transparent) no-repeat;
   padding: 0;
 }
 

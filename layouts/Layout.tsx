@@ -5,6 +5,8 @@ import Modal from '@/components/Modal'
 import Statement from '@/components/Statement'
 import Offline from '@/components/Offline'
 import { ActionBtn } from '@/components/Action'
+import Banner from '@/components/Banner'
+import styles from '@/styles/Layout.module.css'
 
 type Props = {
   children: ReactNode
@@ -17,21 +19,20 @@ const Layout = ({ children }: Props) => {
     <>
       <Offline />
 
-      <div className="grid">
-        <header className="header">
-          <div className="banner">
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <Banner cssClass={styles.banner}>
             <ActionBtn
               onClick={() => setModalVisibility(true)}
               disabled={isModalVisible}
             >
               🇺🇦 Stand with Ukraine 🇺🇦
             </ActionBtn>
-          </div>
-
+          </Banner>
           <Header />
         </header>
 
-        <main className="main">
+        <main className={styles.main}>
           { children }
         </main>
       </div>

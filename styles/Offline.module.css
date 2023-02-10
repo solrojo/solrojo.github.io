@@ -2,13 +2,7 @@
   position: absolute;
   top: 0;
   width: 100vw;
-  padding: var(--spacer);
-  text-transform: uppercase;
-  color: var(--light);
-  background: var(--accent);
-  text-align: center;
   z-index: 999;
-  text-align: center;
 }
 
 .enter {

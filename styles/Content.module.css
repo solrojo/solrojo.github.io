@@ -8,7 +8,7 @@
 @media (min-width: 1024px) {
   .container {
     padding: var(--spacer-double);
-    grid-template-columns: var(--grid-item-size);
+    grid-template-columns: var(--grid-item-size) var(--grid-item-size);
     place-items: center;
     place-content: center;
   }

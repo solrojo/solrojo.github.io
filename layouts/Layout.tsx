@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Header from '@/components/Header'
 import Modal from '@/components/Modal'
 import Statement from '@/components/Statement'
+import Offline from '@/components/Offline'
 import { ActionBtn } from '@/components/Action'
 
 type Props = {
@@ -14,6 +15,8 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
+      <Offline />
+
       <div className="grid">
         <header className="header">
           <div className="banner">

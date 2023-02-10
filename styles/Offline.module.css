@@ -1,0 +1,34 @@
+.container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: var(--spacer);
+  text-transform: uppercase;
+  color: var(--light);
+  background: var(--accent);
+  text-align: center;
+  z-index: 999;
+  text-align: center;
+}
+
+.enter {
+  transform: translate3d(0, -100vh, 0);
+}
+
+.enterActive {
+  transform: translate3d(0, 0, 0);
+  transition: transform var(--one-third-second);
+}
+
+.enterDone {
+  transform: translate3d(0, 0, 0);
+}
+
+.exit {
+  transform: translate3d(0, 0, 0);
+}
+
+.exitActive {
+  transform: translate3d(0, -100vh, 0);
+  transition: transform var(--one-third-second);
+}

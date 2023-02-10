@@ -1,3 +1,4 @@
-.element {
+.container {
+  display: inline-grid;
   padding: var(--spacer);
 }

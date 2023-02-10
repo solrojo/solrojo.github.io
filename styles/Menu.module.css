@@ -22,7 +22,7 @@
 
 .item {
   padding: var(--spacer);
-  display: inline-block;
+  display: inline-grid;
   margin-bottom: var(--spacer);
 }
 

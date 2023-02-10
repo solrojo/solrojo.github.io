@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-rows: auto var(--grid-item-size);
+  grid-template-areas:
+    "header"
+    "main";
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, var(--dark), transparent) no-repeat;
+}
+
+.header {
+  grid-area: header;
+}
+
+.banner {
+  background: var(--dark);
+  background: linear-gradient(to bottom, var(--dark), transparent) no-repeat;
+  padding: 0;
+}
+
+.main {
+  grid-area: main;
+}

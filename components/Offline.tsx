@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import Banner from '@/components/Banner'
 import styles from '@/styles/Offline.module.css'
 
 export default () => {
@@ -35,7 +36,7 @@ export default () => {
       unmountOnExit
     >
       <div ref={nodeRef} className={styles.container}>
-        Looks like we're offline
+        <Banner>Looks like we're offline</Banner>
       </div>
     </CSSTransition>
   )

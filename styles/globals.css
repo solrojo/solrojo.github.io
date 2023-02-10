@@ -63,30 +63,6 @@ a {
   text-decoration: none;
 }
 
-.banner {
-  background: var(--dark);
-  background: linear-gradient(to bottom, var(--dark), transparent) no-repeat;
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-rows: auto var(--grid-item-size);
-  grid-template-areas:
-    "header"
-    "main";
-  min-height: 100vh;
-  background: linear-gradient(to right bottom, var(--dark), transparent) no-repeat;
-}
-
-.header {
-  grid-area: header;
-}
-
-.main {
-  grid-area: main;
-}
-
 @media (min-width: 768px) {
   body {
     line-height: 1;

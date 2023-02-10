@@ -4,5 +4,7 @@
   place-items: center;
   place-content: space-between;
   gap: var(--spacer);
-  padding-bottom: var(--spacer-double);
+  padding: var(--spacer-double);
+  position: relative;
+  z-index: 1;
 }

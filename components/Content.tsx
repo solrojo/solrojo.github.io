@@ -1,5 +1,6 @@
 import links from '@/constants/links'
 import { ActionLinkExternal } from '@/components/Action'
+import Image from 'next/image'
 import styles from '@/styles/Content.module.css'
 
 export default () => {
@@ -7,7 +8,7 @@ export default () => {
 
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.text}>
         <p>Greetings, my name is</p>
         <h1>Dmitri Korchemkin</h1>
         <p>I am</p>
@@ -17,16 +18,29 @@ export default () => {
           ? (
             <p>
               feel free to
-              <ActionLinkExternal
-                href={link}
-                withBg
-              >
-                Contact Me
-              </ActionLinkExternal>
+              <span className={styles.actionContainer}>
+                <ActionLinkExternal
+                  href={link}
+                  withBg
+                  cssClass={styles.action}
+                >
+                  Contact Me
+                </ActionLinkExternal>
+              </span>
             </p>
           )
           : null
         }
+      </div>
+
+      <div className={styles.imageContainer}>
+        <Image
+          className={styles.image}
+          src="/img/face.jpg"
+          alt="Dmitri Korchemkin"
+          width={500}
+          height={500}
+        />
       </div>
     </div>
   )

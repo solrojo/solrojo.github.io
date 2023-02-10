@@ -1,15 +1,78 @@
 .container {
-  padding: var(--spacer-double) var(--spacer);
+  padding: 0 var(--spacer) var(--spacer-double);
   display: grid;
   gap: var(--spacer);
   height: 100%;
+  text-align: center;
+}
+
+.text {
+  display: grid;
+  order: 2;
+}
+
+.actionContainer {
+  display: block;
+  padding: var(--spacer-double) var(--spacer);
+}
+
+.action {
+  width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  place-self: center;
+  padding: var(--spacer-double);
+}
+
+.image {
+  display: inline-grid;
+  width: 100%;
+  height: auto;
+  border-radius: var(--spacer);
+  animation: shadow 1s forwards;
+}
+
+@keyframes shadow {
+  to {
+    box-shadow: var(--spacer-double) var(--spacer-double) var(--dark);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--spacer-double);
+  }
+
+  .text {
+    display: grid;
+    order: 0;
+  }
+
+  .actionContainer {
+    display: inline;
+    padding: 0;
+  }
+
+  .action {
+    width: auto;
+  }
+
+  .imageContainer {
+    width: 80%;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding: var(--spacer-double);
     grid-template-columns: var(--grid-item-size) var(--grid-item-size);
     place-items: center;
     place-content: center;
+    text-align: left;
+  }
+
+  .image {
+    transform: rotate(10deg);
   }
 }

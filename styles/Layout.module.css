@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-rows: auto var(--grid-item-size);
+  grid-template-rows: auto var(--grid-item-size) auto;
   grid-template-areas:
     "header"
     "main";
@@ -19,4 +19,11 @@
 
 .main {
   grid-area: main;
+  padding-bottom: 4rem;
+}
+
+.footer {
+  padding: var(--spacer-double);
+  background: var(--dark);
+  background: linear-gradient(to top, var(--dark), transparent);
 }

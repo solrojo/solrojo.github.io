@@ -4,7 +4,7 @@ import Content from '@/components/Content'
 export default () => (
   <>
     <Head>
-      <title>Dmitrii Korchemkin</title>
+      <title>Dmitri Korchemkin</title>
     </Head>
 
     <Content />

@@ -23,6 +23,12 @@
   background-size: cover;
 }
 
+@media (min-width: 768px) {
+  .element {
+    font-size: var(--measure-triple);
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     grid-template-rows: none;

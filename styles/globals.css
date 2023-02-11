@@ -18,7 +18,7 @@
   --one-third-second: calc(var(--one-part-second) * 3);
   --half-second: calc(var(--second) / 2);
 
-  --font-size: 16px;
+  --font-size: 18px;
   --grid-item-size: 1fr;
   --letter-spacing: .1rem;
   --line-height: 1;
@@ -79,6 +79,10 @@ p {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --font-size: 20px;
+  }
+
   h1 {
     font-size: var(--measure-triple);
   }

@@ -1,10 +1,12 @@
 .container {
   display: grid;
+  place-self: center;
+  width: 100%;
   grid-auto-flow: column;
   place-items: center;
   place-content: space-between;
-  gap: var(--spacer);
-  padding: var(--spacer-double);
+  gap: var(--measure);
+  padding: var(--measure-double) var(--measure);
   position: relative;
   z-index: 1;
 }

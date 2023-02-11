@@ -3,21 +3,19 @@
   grid-template-rows: auto var(--grid-item-size);
   place-items: stretch;
   place-content: stretch;
-  gap: var(--spacer);
+  gap: var(--measure);
   height: 100%;
 }
 
 .text {
-  padding: var(--spacer-double);
-  align-self: center;
+  padding: var(--measure-double);
   place-self: center;
   text-align: center;
 }
 
 .element {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  line-height: 1;
+  font-size: var(--measure-double);
+  margin-bottom: var(--measure);
 }
 
 .image {
@@ -37,6 +35,6 @@
   }
 
   .element {
-    font-size: 6rem;
+    font-size: var(--measure-times-six);
   }
 }

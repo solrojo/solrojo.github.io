@@ -1,14 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Logo.module.css'
+import logo from '../public/img/logo.svg'
 
 export default () => (
-  <Link href="/" className={styles.container}>
+  <Link href="/">
     <Image
-      src="/img/kda.name.svg"
+      src={logo}
       alt="kda.name"
-      width={150}
-      height={20}
+      className={styles.image}
+      priority
     />
   </Link>
 )

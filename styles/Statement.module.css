@@ -15,7 +15,7 @@
 
 .element {
   font-size: var(--measure-double);
-  margin-bottom: var(--measure);
+  margin-bottom: var(--measure-double);
 }
 
 .image {

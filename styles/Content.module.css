@@ -1,7 +1,7 @@
 .container {
-  padding: 0 var(--spacer) var(--spacer-double);
+  padding: 0 var(--measure) var(--measure-double);
   display: grid;
-  gap: var(--spacer);
+  gap: var(--measure);
   height: 100%;
   text-align: center;
 }
@@ -13,7 +13,7 @@
 
 .actionContainer {
   display: block;
-  padding: var(--spacer-double) var(--spacer);
+  padding: var(--measure);
 }
 
 .action {
@@ -23,30 +23,30 @@
 .imageContainer {
   width: 100%;
   place-self: center;
-  padding: var(--spacer-double);
+  padding: var(--measure-double);
+  margin-bottom: var(--measure);
 }
 
 .image {
   display: inline-grid;
   width: 100%;
   height: auto;
-  border-radius: var(--spacer);
+  border-radius: var(--measure);
   animation: shadow 1s forwards;
 }
 
 @keyframes shadow {
   to {
-    box-shadow: var(--spacer-double) var(--spacer-double) var(--dark);
+    box-shadow: var(--measure-double) var(--measure-double) var(--dark);
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: var(--spacer-double);
+    padding: var(--measure-double);
   }
 
   .text {
-    display: grid;
     order: 0;
   }
 
@@ -60,7 +60,7 @@
   }
 
   .imageContainer {
-    width: 80%;
+    width: 60%;
   }
 }
 
@@ -70,6 +70,10 @@
     place-items: center;
     place-content: center;
     text-align: left;
+  }
+
+  .imageContainer {
+    width: 80%;
   }
 
   .image {

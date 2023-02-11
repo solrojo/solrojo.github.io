@@ -2,6 +2,6 @@
   display: grid;
   place-content: center;
   place-items: center;
-  padding: var(--spacer-double) var(--spacer);
+  padding: var(--measure-double) var(--measure);
   background: var(--accent);
 }

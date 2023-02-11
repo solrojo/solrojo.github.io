@@ -3,9 +3,8 @@
   background: none;
   border: 0;
   transition: transform var(--one-part-second);
-  padding: var(--spacer);
+  padding: var(--measure);
   cursor: pointer;
-  line-height: 1;
   text-align: center;
 }
 
@@ -18,11 +17,10 @@
 }
 
 .elementWithBg {
-  border-radius: var(--spacer-half);
+  border-radius: var(--measure-half);
   background: var(--dark);
   background: linear-gradient(to right, transparent, var(--dark), transparent) no-repeat;
-  margin: 0 var(--spacer-half);
-  padding: .8rem;
+  margin: 0 var(--measure-half);
+  padding: var(--measure-eighth-part);
   border: 1px solid var(--light);
-  margin: 0 var(--spacer-half);
 }

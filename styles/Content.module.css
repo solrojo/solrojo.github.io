@@ -41,6 +41,13 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    animation: none;
+    box-shadow: var(--measure-double) var(--measure-double) var(--dark);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     padding: var(--measure-double);

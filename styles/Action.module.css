@@ -12,6 +12,12 @@
   transform: scale3d(.95, .95, .95);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .element {
+    transition: unset;
+  }
+}
+
 .element:disabled {
   opacity: 0.5;
 }

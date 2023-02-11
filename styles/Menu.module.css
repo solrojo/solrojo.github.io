@@ -47,6 +47,12 @@
   transition: transform var(--one-third-second);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .enterActive,
+  .exitActive {
+    transition: unset;
+  }
+}
 
 @media (min-width: 768px) {
   .container {

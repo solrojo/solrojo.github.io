@@ -1,8 +1,8 @@
 import links from '@/constants/links'
 import { ActionLinkExternal } from '@/components/Action'
-import Image from 'next/image'
 import styles from '@/styles/Content.module.css'
-import face from '../public/img/face.jpg'
+// import Image from 'next/image'
+// import face from '../public/img/face.jpg'
 
 export default () => {
   const link = links.find(el => el.text.toLocaleLowerCase().includes('linkedin'))?.href
@@ -34,14 +34,14 @@ export default () => {
         }
       </div>
 
-      <div className={styles.imageContainer}>
+      {/* <div className={styles.imageContainer}>
         <Image
           className={styles.image}
           src={face}
           alt="Dmitri Korchemkin"
           priority
         />
-      </div>
+      </div> */}
     </div>
   )
 }

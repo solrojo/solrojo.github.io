@@ -8,18 +8,19 @@ import styles from '@/styles/Menu.module.css'
 const Menu = () => {
   const [isVisible, setVisibility] = useState(false)
   const [isOpened, setOpen] = useState(false)
-  const nodeRef = useRef<HTMLElement>(null);
+  const nodeRef = useRef<HTMLElement>(null)
 
-  const hadleClickOutside = ({ target }: MouseEvent) => {
-    if (isOpened && !nodeRef.current?.contains(target as Node)) {
-      setVisibility(false);
-    }
-  }
 
   useEffect(() => {
-    window.addEventListener('click', hadleClickOutside);
+    const hadleClickOutside = ({ target }: MouseEvent) => {
+      if (isOpened && !nodeRef.current?.contains(target as Node)) {
+        setVisibility(false)
+      }
+    }
+
+    window.addEventListener('click', hadleClickOutside)
     return () => window.removeEventListener('click', hadleClickOutside)
-  }, [hadleClickOutside])
+  }, [isOpened])
 
   return (
     <>

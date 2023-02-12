@@ -5,7 +5,7 @@ import styles from '@/styles/Content.module.css'
 import face from '../public/img/face.jpg'
 
 export default () => {
-  const link = links.find(el => el.text.toLocaleLowerCase().includes('linkedin'))?.href;
+  const link = links.find(el => el.text.toLocaleLowerCase().includes('linkedin'))?.href
 
   return (
     <div className={styles.container}>

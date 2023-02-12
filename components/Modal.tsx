@@ -12,7 +12,7 @@ type Props = {
 }
 
 const Modal = ({ opened, onClose, children }: Props) => {
-  const nodeRef = useRef(null);
+  const nodeRef = useRef(null)
 
   return (
     <>

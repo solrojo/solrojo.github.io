@@ -53,11 +53,11 @@ body {
 }
 
 @media (max-width: 480px) {
-  body { background-image: url(/img/bg-mobile.png); }
+  body { background-image: url(/img/bg-mobile.webp); }
 }
 
 @media (min-width: 481px) {
-  body { background-image: url(/img/bg-desktop.png); }
+  body { background-image: url(/img/bg-desktop.webp); }
 }
 
 h1 {

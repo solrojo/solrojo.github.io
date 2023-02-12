@@ -34,14 +34,14 @@ export default () => {
         }
       </div>
 
-      {/* <div className={styles.imageContainer}>
-        <Image
+      <div className={styles.imageContainer}>
+        {/* <Image
           className={styles.image}
           src={face}
           alt="Dmitri Korchemkin"
           priority
-        />
-      </div> */}
+        /> */}
+      </div>
     </div>
   )
 }

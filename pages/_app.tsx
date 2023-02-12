@@ -7,8 +7,7 @@ import Script from 'next/script'
 const font = GoogleFont({
   weight: '300',
   subsets: ['latin'],
-  fallback: ['Helvetica', 'sans-serif'],
-  preload: false
+  fallback: ['Helvetica', 'sans-serif']
 })
 
 export default ({ Component, pageProps }: AppProps) => (

@@ -5,7 +5,7 @@ import { Montserrat as GoogleFont }from '@next/font/google'
 import Script from 'next/script'
 
 const font = GoogleFont({
-  weight: '100',
+  weight: '300',
   subsets: ['latin'],
   fallback: ['Helvetica', 'sans-serif']
 })

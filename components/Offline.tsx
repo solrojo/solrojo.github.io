@@ -4,7 +4,7 @@ import Banner from '@/components/Banner'
 import styles from '@/styles/Offline.module.css'
 
 export default () => {
-  const [iVisible, setVisibility] = useState(false)
+  const [isVisible, setVisibility] = useState(false)
   const nodeRef = useRef(null);
 
   const hadleOffline = () => setVisibility(true)
@@ -24,7 +24,7 @@ export default () => {
   return (
     <CSSTransition
       nodeRef={nodeRef}
-      in={iVisible}
+      in={isVisible}
       timeout={300}
       classNames={{
         enter: styles.enter,

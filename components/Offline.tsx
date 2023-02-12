@@ -5,21 +5,20 @@ import styles from '@/styles/Offline.module.css'
 
 export default () => {
   const [isVisible, setVisibility] = useState(false)
-  const nodeRef = useRef(null);
-
-  const hadleOffline = () => setVisibility(true)
-  const hadleOnline = () => setVisibility(false)
+  const nodeRef = useRef(null)
 
   useEffect(() => {
-    window.addEventListener('offline', hadleOffline);
-    return () => window.removeEventListener('offline', hadleOffline)
-  }, [hadleOffline]);
+    const hadleOnline = () => setVisibility(false)
+    const hadleOffline = () => setVisibility(true)
 
-  useEffect(() => {
-    window.addEventListener('online', hadleOnline);
-    return () => window.removeEventListener('online', hadleOnline)
-  }, [hadleOnline]);
+    window.addEventListener('online', hadleOnline)
+    window.addEventListener('offline', hadleOffline)
 
+    return () => {
+      window.removeEventListener('online', hadleOnline)
+      window.removeEventListener('offline', hadleOffline)
+    }
+  }, [])
 
   return (
     <CSSTransition
@@ -36,7 +35,7 @@ export default () => {
       unmountOnExit
     >
       <div ref={nodeRef} className={styles.container}>
-        <Banner>Looks like we're offline</Banner>
+        <Banner>Looks like we&apos;re offline</Banner>
       </div>
     </CSSTransition>
   )

@@ -10,6 +10,7 @@
     "export": "next export",
     "prepare": "husky install"
   },
+  "browserslist": [">0.3%", "not dead", "not op_mini all"],
   "dependencies": {
     "@next/font": "^13.1.4",
     "@types/node": "18.11.18",

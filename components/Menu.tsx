@@ -27,6 +27,7 @@ const Menu = () => {
       <ActionBtn
         disabled={isVisible}
         onClick={() => setVisibility(true)}
+        aria-label="Open menu"
       >
         Menu
       </ActionBtn>
@@ -46,9 +47,16 @@ const Menu = () => {
         onEntered={() => setOpen(true)}
         onExited={() => setOpen(false)}
       >
-        <nav ref={nodeRef} className={styles.container}>
+        <nav
+          ref={nodeRef}
+          className={styles.container}
+          aria-label="Main menu"
+        >
           <div className={styles.header}>
-            <ActionBtn onClick={() => setVisibility(false)}>
+            <ActionBtn
+              onClick={() => setVisibility(false)}
+              aria-label="Close menu"
+            >
               Close
             </ActionBtn>
           </div>
@@ -57,6 +65,8 @@ const Menu = () => {
             list={links}
             listClass={styles.list}
             listItemClass={styles.item}
+            listRole="menu"
+            itemRole="menuitem"
           />
         </nav>
       </CSSTransition>

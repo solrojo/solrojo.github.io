@@ -38,7 +38,7 @@ export default () => {
         {/* <Image
           className={styles.image}
           src={face}
-          alt="Dmitri Korchemkin"
+          alt="Photo of Dmitri Korchemkin"
           priority
         /> */}
       </div>

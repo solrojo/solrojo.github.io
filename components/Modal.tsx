@@ -29,7 +29,11 @@ const Modal = ({ opened, onClose, children }: Props) => {
         }}
         unmountOnExit
       >
-        <div ref={nodeRef} className={styles.container}>
+        <div
+          ref={nodeRef}
+          className={styles.container}
+          role="dialog"
+        >
           <div className={styles.header}>
             <ActionBtn onClick={() => onClose()}>
               Close

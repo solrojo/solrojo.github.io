@@ -1,14 +1,17 @@
 import { ActionLinkProps, ActionLinkPropTypes } from '@/components/Action/constants'
-import ActionBtn from '@/components/Action/ActionBtn'
+import styles from '@/styles/Action.module.css'
 
-const ActionLinkExternal = (props: ActionLinkProps) => (
+const ActionLinkExternal = ({ href, children, cssClass, withBg }: ActionLinkProps) => (
   <a
-    href={props.href}
+    href={href}
     target="_blank"
     rel="noreferrer"
+    className={`${styles.element} ${withBg ? styles.elementWithBg : ''} ${cssClass ? cssClass : ''}`}
+    role="link"
+    aria-label={typeof children === 'string' ? children : ''}
   >
-  <ActionBtn {...props}>{props.children}</ActionBtn>
-</a>
+    {children}
+  </a>
 )
 
 ActionLinkExternal.propTypes = ActionLinkPropTypes

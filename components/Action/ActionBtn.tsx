@@ -5,9 +5,11 @@ import { ActionBtnProps } from '@/components/Action/constants'
 const ActionBtn = ({ disabled, withBg, cssClass, onClick, children }: ActionBtnProps) => (
   <button
     type="button"
-    className={`${styles.element} ${withBg ? styles.elementWithBg : null} ${cssClass}`}
+    className={`${styles.element} ${withBg ? styles.elementWithBg : ''} ${cssClass ? cssClass : ''}`}
     disabled={disabled}
     onClick={() => onClick?.()}
+    role="button"
+    aria-label={typeof children === 'string' ? children : ''}
   >
     { children }
   </button>

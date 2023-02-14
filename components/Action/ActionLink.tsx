@@ -1,10 +1,15 @@
 import { ActionLinkProps, ActionLinkPropTypes } from '@/components/Action/constants'
 import Link from 'next/link'
-import ActionBtn from '@/components/Action/ActionBtn'
+import styles from '@/styles/Action.module.css'
 
-const ActionLink = (props: ActionLinkProps) => (
-  <Link href={props.href}>
-    <ActionBtn {...props}>{props.children}</ActionBtn>
+const ActionLink = ({ href, children, cssClass, withBg }: ActionLinkProps) => (
+  <Link
+    href={href}
+    className={`${styles.element} ${withBg ? styles.elementWithBg : ''} ${cssClass ? cssClass : ''}`}
+    role="link"
+    aria-label={typeof children === 'string' ? children : ''}
+  >
+    {children}
   </Link>
 )
 

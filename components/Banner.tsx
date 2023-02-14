@@ -8,7 +8,9 @@ type Props = {
 }
 
 const Banner = ({ children, cssClass }: Props) => (
-  <div className={`${styles.container} ${cssClass}`}>{children}</div>
+  <div className={`${styles.container} ${cssClass ? cssClass : ''}`}>
+    {children}
+  </div>
 )
 
 Banner.propTypes = {

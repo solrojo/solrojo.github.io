@@ -6,6 +6,7 @@
     "main";
   place-content: center;
   place-items: center;
+  min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(to right bottom, var(--dark), transparent) no-repeat;
 }

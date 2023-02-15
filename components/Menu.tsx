@@ -4,6 +4,9 @@ import links from '@/constants/links'
 import List from '@/components/List'
 import { ActionBtn } from '@/components/Action'
 import styles from '@/styles/Menu.module.css'
+import Image from 'next/image'
+import burger from '../public/img/burger.svg'
+import CloseIcon from '@/components/CloseIcon'
 
 const Menu = () => {
   const [isVisible, setVisibility] = useState(false)
@@ -29,7 +32,13 @@ const Menu = () => {
         onClick={() => setVisibility(true)}
         aria-label="Open menu"
       >
-        Menu
+        <Image
+          src={burger}
+          alt="Menu icon"
+          priority
+          width={46}
+          height={46}
+        />
       </ActionBtn>
 
       <CSSTransition
@@ -57,7 +66,7 @@ const Menu = () => {
               onClick={() => setVisibility(false)}
               aria-label="Close menu"
             >
-              Close
+              <CloseIcon />
             </ActionBtn>
           </div>
 

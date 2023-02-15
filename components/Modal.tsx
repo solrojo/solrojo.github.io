@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { ActionBtn } from '@/components/Action'
 import styles from '@/styles/Modal.module.css'
+import CloseIcon from '@/components/CloseIcon'
 
 type Props = {
   opened: boolean
@@ -35,8 +36,11 @@ const Modal = ({ opened, onClose, children }: Props) => {
           role="dialog"
         >
           <div className={styles.header}>
-            <ActionBtn onClick={() => onClose()}>
-              Close
+            <ActionBtn
+              onClick={() => onClose()}
+              aria-label="Close dialog"
+            >
+              <CloseIcon />
             </ActionBtn>
           </div>
           <div className={styles.content}>

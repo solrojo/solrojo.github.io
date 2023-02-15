@@ -26,7 +26,7 @@ const Layout = ({ children }: Props) => {
               onClick={() => setModalVisibility(true)}
               disabled={isModalVisible}
             >
-              🇺🇦 Stand with Ukraine 🇺🇦
+              Stand with Ukraine
             </ActionBtn>
           </Banner>
           <Header />

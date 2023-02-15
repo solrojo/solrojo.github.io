@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Header from '@/components/Header'
 import Modal from '@/components/Modal'
@@ -7,6 +7,8 @@ import Offline from '@/components/Offline'
 import { ActionBtn } from '@/components/Action'
 import Banner from '@/components/Banner'
 import styles from '@/styles/Layout.module.css'
+import statement from '@/constants/statement'
+import { StatementLangObject } from '@/constants/types'
 
 type Props = {
   children: ReactNode
@@ -14,6 +16,13 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   const [isModalVisible, setModalVisibility] = useState(false)
+  const [statementData, setStatementData] = useState<StatementLangObject>(statement.en)
+
+  useEffect(() => {
+    if (/ru/.test(window.navigator.language)) {
+      setStatementData(statement.ru)
+    }
+  }, [])
 
   return (
     <>
@@ -26,7 +35,7 @@ const Layout = ({ children }: Props) => {
               onClick={() => setModalVisibility(true)}
               disabled={isModalVisible}
             >
-              Stand with Ukraine
+              {statementData.title}
             </ActionBtn>
           </Banner>
           <Header />
@@ -43,7 +52,7 @@ const Layout = ({ children }: Props) => {
         opened={isModalVisible}
         onClose={() => setModalVisibility(false)}
       >
-        <Statement />
+        <Statement data={statementData}/>
       </Modal>
     </>
   )

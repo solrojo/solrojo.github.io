@@ -5,7 +5,7 @@
   top: 0;
   right: 0;
   background: var(--dark);
-  background: linear-gradient(190deg, var(--dark) 70%, var(--accent)) no-repeat;
+  background: var(--bg-gradient);
   color: var(--light);
   padding: var(--measure);
 }

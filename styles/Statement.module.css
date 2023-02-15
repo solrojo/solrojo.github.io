@@ -19,8 +19,17 @@
 }
 
 .image {
-  background: url('/img/inmate.webp') center no-repeat;
   background-size: cover;
+}
+
+.inmate {
+  background: url('/img/inmate.webp') center no-repeat;
+}
+
+.antiZ {
+  background: url('/img/anti-z.svg') center no-repeat;
+  background-size: contain;
+  margin: 0 var(--measure) var(--measure-double);
 }
 
 @media (min-width: 768px) {

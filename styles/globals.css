@@ -22,6 +22,8 @@
   --grid-item-size: 1fr;
   --letter-spacing: .1rem;
   --line-height: 1;
+
+  --bg-gradient: linear-gradient(-190deg, var(--dark) 70%, var(--accent)) no-repeat;
 }
 
 * {
@@ -40,6 +42,7 @@
 
 body {
   background-color: var(--dark);
+  background: var(--bg-gradient);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;

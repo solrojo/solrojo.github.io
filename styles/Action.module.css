@@ -6,6 +6,7 @@
   padding: var(--measure);
   cursor: pointer;
   text-align: center;
+  line-height: var(--measure-one-n-half);
 }
 
 .element:active {

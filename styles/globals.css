@@ -65,6 +65,7 @@ h1 {
   font-size: var(--measure-two-n-half);
   line-height: 1;
   padding-bottom: var(--measure-half);
+  background: var(--gradient);
 }
 
 a {

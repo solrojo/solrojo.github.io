@@ -1,3 +1,5 @@
+import statement from '@/constants/statement'
+
 describe('Statement', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -9,24 +11,33 @@ describe('Statement', () => {
       .click()
   })
 
+  const statementData = (
+    /ru/.test(window.navigator.language)
+      ? statement.ru
+      : statement.en
+  )
+
   it('contain a text', () => {
     cy.get('[data-test-id="statement-text"]')
       .should('be.visible')
-      .and('not.be.empty')
+      .should('have.text', statementData.title)
   })
 
   it('contain an action', () => {
     cy.get('[data-test-id="statement-action"]')
       .should('be.visible')
-      .and('have.attr', 'href')
-      .and('not.be.empty')
+      .contains(statementData.action.text)
+      .should('have.attr', 'href')
+      .should('equal', statementData.action.link)
   })
 
   it('contain an image', () => {
     cy.get('[data-test-id="statement-image"]')
       .should('be.visible')
-      .and('have.css', 'background-image')
-      .and('not.be.empty')
+      .then(el => {
+        expect(el.attr('class')).include(statementData.imageClass)
+        expect(el.css('background-image')).not.be.empty
+      })
   })
 })
 

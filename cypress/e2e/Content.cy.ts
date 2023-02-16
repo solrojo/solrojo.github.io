@@ -16,6 +16,12 @@ describe('Content', () => {
 
     cy.contains('feel free to', { matchCase: false })
 
+    cy.get('[data-test-id="contact-me"]')
+      .contains('Contact me', { matchCase: false })
+      .should('have.attr', 'href')
+      .should('match', /linkedin.com|krchmkn/)
+
+    // TODO
     // cy.get('[data-test-id="portrait"]')
     //   .should('be.visible')
     //   .and('have.attr', 'src')

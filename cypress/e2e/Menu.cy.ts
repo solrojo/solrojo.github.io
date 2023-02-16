@@ -1,3 +1,5 @@
+import links from '@/constants/links'
+
 describe('Menu', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -19,13 +21,14 @@ describe('Menu', () => {
     it('contain elements', () => {
       cy.get('[data-test-id="menuitem"]')
         .should('have.length.least', 1)
-        .and('be.visible')
-        .then(menuitem => {
-          expect(menuitem.text()).not.be.empty
+        .each((el, index) => {
+          expect(el).be.visible
+
+          const link = el.find('a');
+          expect(link).be.visible
+          expect(link.text()).equal(links[index].text)
+          expect(link.attr('href')).equal(links[index].href)
         })
-        .find('a')
-        .should('have.attr', 'href')
-        .should('not.be.empty')
     })
 
     it('can be closed', () => {

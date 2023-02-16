@@ -7,9 +7,10 @@ export default () => (
   <Link href="/">
     <Image
       src={logo}
-      alt="Link to website current address www.kda.name"
+      alt="Website logo"
       className={styles.image}
       priority
+      data-test-id="logo"
     />
   </Link>
 )

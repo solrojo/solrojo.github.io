@@ -8,7 +8,10 @@ type Props = {
 }
 
 const Banner = ({ children, cssClass }: Props) => (
-  <div className={`${styles.container} ${cssClass ? cssClass : ''}`}>
+  <div
+    className={`${styles.container} ${cssClass ? cssClass : ''}`}
+    data-test-id="banner"
+  >
     {children}
   </div>
 )

@@ -30,7 +30,8 @@ const Menu = () => {
       <ActionBtn
         disabled={isVisible}
         onClick={() => setVisibility(true)}
-        aria-label="Open menu"
+        ariaLabel="Open menu"
+        testId="open-menu"
       >
         <Image
           src={burger}
@@ -38,6 +39,7 @@ const Menu = () => {
           priority
           width={46}
           height={46}
+          data-test-id="burger-icon"
         />
       </ActionBtn>
 
@@ -59,12 +61,14 @@ const Menu = () => {
         <nav
           ref={nodeRef}
           className={styles.container}
-          aria-label="Main menu"
+          aria-label="Menu"
+          data-test-id="menu"
         >
           <div className={styles.header}>
             <ActionBtn
               onClick={() => setVisibility(false)}
-              aria-label="Close menu"
+              ariaLabel="Close menu"
+              testId="close-menu"
             >
               <CloseIcon />
             </ActionBtn>

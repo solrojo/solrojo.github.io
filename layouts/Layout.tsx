@@ -26,14 +26,16 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
-      <Offline />
+      <Offline data-test-id="offline" />
 
-      <div className={styles.container}>
-        <header className={styles.header}>
+      <div className={styles.container}  data-test-id="layout">
+        <header className={styles.header} data-test-id="layout-header">
           <Banner cssClass={styles.banner}>
             <ActionBtn
               onClick={() => setModalVisibility(true)}
               disabled={isModalVisible}
+              ariaLabel="Open modal"
+              testId="open-modal"
             >
               {statementData.title}
             </ActionBtn>
@@ -41,11 +43,11 @@ const Layout = ({ children }: Props) => {
           <Header />
         </header>
 
-        <main className={styles.main}>
+        <main className={styles.main} data-test-id="layout-main">
           { children }
         </main>
 
-        <footer className={styles.footer}></footer>
+        <footer className={styles.footer}  data-test-id="layout-footer"></footer>
       </div>
 
       <Modal

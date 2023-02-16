@@ -34,7 +34,7 @@ export default () => {
       }}
       unmountOnExit
     >
-      <div ref={nodeRef} className={styles.container}>
+      <div ref={nodeRef} className={styles.container} data-test-id="offline">
         <Banner>Looks like we&apos;re offline</Banner>
       </div>
     </CSSTransition>

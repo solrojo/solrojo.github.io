@@ -24,6 +24,8 @@ export default () => {
                   href={link}
                   withBg
                   cssClass={styles.action}
+                  ariaLabel="Contact me link"
+                  testId="contact-me"
                 >
                   Contact Me
                 </ActionLinkExternal>
@@ -40,6 +42,7 @@ export default () => {
           src={face}
           alt="Photo of Dmitri Korchemkin"
           priority
+          data-test-id="portrait"
         /> */}
       </div>
     </div>

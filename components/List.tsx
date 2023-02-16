@@ -11,6 +11,7 @@ const List = ({ list, listClass, listItemClass, listRole, itemRole }: ListsProps
         <li
           key={item.id}
           role={itemRole}
+          data-test-id={itemRole}
         >
           <ActionLinkExternal
             href={item.href}

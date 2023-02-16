@@ -34,16 +34,25 @@ const Modal = ({ opened, onClose, children }: Props) => {
           ref={nodeRef}
           className={styles.container}
           role="dialog"
+          data-test-id="modal"
         >
-          <div className={styles.header}>
+          <div
+            className={styles.header}
+            data-test-id="modal-header"
+          >
             <ActionBtn
               onClick={() => onClose()}
-              aria-label="Close dialog"
+              ariaLabel="Close modal"
+              testId="close-modal"
             >
               <CloseIcon />
             </ActionBtn>
           </div>
-          <div className={styles.content}>
+
+          <div
+            className={styles.content}
+            data-test-id="modal-content"
+          >
             { children }
           </div>
         </div>

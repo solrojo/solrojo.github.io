@@ -2,12 +2,15 @@ import { ActionLinkProps, ActionLinkPropTypes } from '@/components/Action/consta
 import Link from 'next/link'
 import styles from '@/styles/Action.module.css'
 
-const ActionLink = ({ href, children, cssClass, withBg }: ActionLinkProps) => (
+const ActionLink = ({
+  href, children, cssClass, withBg, ariaLabel, testId
+}: ActionLinkProps) => (
   <Link
     href={href}
     className={`${styles.element} ${withBg ? styles.elementWithBg : ''} ${cssClass ? cssClass : ''}`}
     role="link"
-    aria-label={typeof children === 'string' ? children : ''}
+    aria-label={ariaLabel}
+    data-test-id={testId}
   >
     {children}
   </Link>

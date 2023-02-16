@@ -9,5 +9,6 @@ export default () => (
     priority
     width={22}
     height={22}
+    data-test-id="close-icon"
   />
 )

@@ -2,7 +2,6 @@
   --dark: #02032a;
   --light: #fff;
   --accent: #f20c43;
-
   --measure: 1rem;
   --measure-half: calc(var(--measure) / 2);
   --measure-one-n-half: calc(var(--measure) * 1.5);
@@ -11,19 +10,17 @@
   --measure-triple: calc(var(--measure) * 3);
   --measure-times-five: calc(var(--measure) * 5);
   --measure-times-six: calc(var(--measure) * 6);
-  --measure-eighth-part: calc((var(--measure) / 10) * 8);
-
   --second: 1s;
   --one-part-second: calc(var(--second) / 10);
   --one-third-second: calc(var(--one-part-second) * 3);
   --half-second: calc(var(--second) / 2);
-
-  --font-size: 18px;
+  --font-size: 16px;
   --grid-item-size: 1fr;
   --letter-spacing: .1rem;
-  --line-height: 1;
-
+  --line-height: 1.4;
   --bg-gradient: linear-gradient(-190deg, var(--dark) 70%, var(--accent)) no-repeat;
+  --gradient: linear-gradient(to right, transparent, var(--dark), transparent) no-repeat;
+  --min-width: 350px;
 }
 
 * {
@@ -41,7 +38,7 @@
 }
 
 body {
-  background-color: var(--dark);
+  background: var(--dark);
   background: var(--bg-gradient);
   background-position: center center;
   background-attachment: fixed;
@@ -53,24 +50,21 @@ body {
   font-weight: inherit;
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
+  min-width: var(--min-width);
 }
 
 @media (max-width: 480px) {
-  body { background-image: url(/img/bg-mobile.webp); }
+  body { background-image: url('/img/bg-mobile.webp'); }
 }
 
 @media (min-width: 481px) {
-  body { background-image: url(/img/bg-desktop.webp); }
+  body { background-image: url('/img/bg-desktop.webp'); }
 }
 
 h1 {
   font-size: var(--measure-two-n-half);
-  margin-bottom: var(--measure);
-}
-
-h2 {
-  font-size: var(--measure-one-n-half);
-  margin-bottom: var(--measure-one-n-half);
+  line-height: 1;
+  padding-bottom: var(--measure-half);
 }
 
 a {
@@ -78,22 +72,19 @@ a {
 }
 
 p {
-  margin-bottom: var(--measure);
+  padding-bottom: var(--measure-half);
 }
 
-@media (min-width: 768px) {
-  :root {
-    --font-size: 20px;
-  }
+p:last-child {
+  padding: 0;
+}
 
-  h1 {
-    font-size: var(--measure-triple);
-  }
+mark {
+  background: var(--gradient);
+}
 
-  h2 {
-    font-size: var(--measure-double);
-    margin-bottom: var(--measure-double);
-  }
+.mb-2vw {
+  margin-bottom: 2vw;
 }
 
 @media (min-width: 1024px) {
@@ -101,9 +92,8 @@ p {
     font-size: var(--measure-times-five);
   }
 
-  h2 {
-    font-size: var(--measure-triple);
-    margin-bottom: var(--measure-triple);
+  mark {
+    font-size: var(--measure-one-n-half);
   }
 }
 
@@ -115,10 +105,5 @@ p {
 
   h1 {
     font-size: 4.4vw;
-  }
-
-  h2 {
-    font-size: 2.4vw;
-    margin-bottom: 2.2vw;
   }
 }

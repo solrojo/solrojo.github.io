@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "stylelint": "npx stylelint '**/styles/**/*.css'",
     "export": "next export",
     "prepare": "husky install",
     "test": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e --browser chrome\"",
@@ -34,6 +35,8 @@
     "@types/react-transition-group": "^4.4.5",
     "cypress": "^12.5.1",
     "husky": "^8.0.3",
-    "start-server-and-test": "^1.15.4"
+    "start-server-and-test": "^1.15.4",
+    "stylelint": "^15.1.0",
+    "stylelint-config-standard": "^30.0.1"
   }
 }

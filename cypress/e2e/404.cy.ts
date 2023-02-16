@@ -4,7 +4,7 @@ describe('404 page', () => {
   })
 
   it('should have a title', () => {
-    cy.get('h2')
+    cy.get('h1')
       .contains('Page not found', { matchCase: false })
       .should('be.visible')
   })

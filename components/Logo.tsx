@@ -4,13 +4,15 @@ import styles from '@/styles/Logo.module.css'
 import logo from '../public/img/logo.svg'
 
 export default () => (
-  <Link href="/">
-    <Image
-      src={logo}
-      alt="Website logo"
-      className={styles.image}
-      priority
-      data-test-id="logo"
-    />
-  </Link>
+  <div className={styles.container}>
+    <Link href="/">
+      <Image
+        src={logo}
+        alt="Website logo"
+        className={styles.image}
+        priority
+        data-test-id="logo"
+      />
+    </Link>
+  </div>
 )

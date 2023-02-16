@@ -26,8 +26,14 @@
 .elementWithBg {
   border-radius: var(--measure-half);
   background: var(--dark);
-  background: linear-gradient(to right, transparent, var(--dark), transparent) no-repeat;
-  margin: 0 var(--measure-half);
-  padding: var(--measure-eighth-part);
+  background: var(--gradient);
+  padding: var(--measure-half) var(--measure);
   border: 1px solid var(--light);
+  width: 100%;
+}
+
+@media (min-width: 481px) {
+  .elementWithBg {
+    width: auto;
+  }
 }

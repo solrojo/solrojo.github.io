@@ -1,0 +1,11 @@
+.element {
+  width: 22px;
+  height: 22px;
+}
+
+@media (min-width: 2000px) {
+  .element {
+    width: 2vw;
+    height: 2vw;
+  }
+}

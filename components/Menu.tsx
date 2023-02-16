@@ -37,9 +37,8 @@ const Menu = () => {
           src={burger}
           alt="Menu icon"
           priority
-          width={46}
-          height={46}
           data-test-id="burger-icon"
+          className={styles.menuIcon}
         />
       </ActionBtn>
 

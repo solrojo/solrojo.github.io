@@ -1,30 +1,26 @@
 .container {
-  padding: 0 var(--measure) var(--measure-double);
   display: grid;
-  gap: var(--measure);
+  gap: var(--measure-double);
   height: 100%;
   text-align: center;
 }
 
 .text {
   display: grid;
+  place-items: center;
+  place-content: center;
   order: 2;
 }
 
 .actionContainer {
-  display: block;
-  padding: var(--measure);
-}
-
-.action {
-  width: 100%;
+  display: inline-flex;
+  padding: 0 var(--measure-half);
 }
 
 .imageContainer {
   width: 100%;
   place-self: center;
-  padding: var(--measure-double);
-  margin-bottom: var(--measure);
+  padding: 0 var(--measure-double) var(--measure-double);
 }
 
 .image {
@@ -49,27 +45,13 @@
 }
 
 @media (min-width: 481px) {
-  .action {
-    width: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: var(--measure-double);
-  }
-
   .text {
     order: 0;
   }
 
-  .actionContainer {
-    display: inline;
-    padding: 0;
-  }
-
   .imageContainer {
     width: 60%;
+    padding: var(--measure-double);
   }
 }
 
@@ -79,6 +61,10 @@
     place-items: center;
     place-content: center;
     text-align: left;
+  }
+
+  .text {
+    place-items: start;
   }
 
   .imageContainer {

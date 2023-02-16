@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '@/styles/NotFound.module.css'
 import { ActionLink } from '@/components/Action'
 
 export default () => (
@@ -8,9 +7,9 @@ export default () => (
       <title>404 Page not found</title>
     </Head>
 
-    <div className={styles.container}>
-      <h2>Page not found</h2>
+    <section>
+      <h1 className="mb-2vw">Page not found</h1>
       <ActionLink href="/" withBg>Go to main page</ActionLink>
-    </div>
+    </section>
   </>
 )

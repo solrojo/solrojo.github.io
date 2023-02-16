@@ -8,28 +8,31 @@
 }
 
 .text {
-  padding: var(--measure-double);
+  padding: var(--measure);
   place-self: center;
   text-align: center;
 }
 
 .element {
   font-size: var(--measure-double);
-  margin-bottom: var(--measure-double);
+  margin-bottom: var(--measure);
+  line-height: 1;
 }
 
 .image {
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .inmate {
-  background: url('/img/inmate.webp') center no-repeat;
+  background-image: url('/img/inmate.webp');
 }
 
 .antiZ {
-  background: url('/img/anti-z.svg') center no-repeat;
+  background-image: url('/img/anti-z.svg');
   background-size: contain;
-  margin: 0 var(--measure) var(--measure-double);
+  margin: 0 var(--measure-double) var(--measure-double);
 }
 
 @media (min-width: 768px) {
@@ -50,6 +53,10 @@
   }
 
   .element {
-    font-size: var(--measure-times-six);
+    font-size: var(--measure-times-five);
+  }
+
+  .antiZ {
+    margin: 0 var(--measure) var(--measure-double);
   }
 }

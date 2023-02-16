@@ -3,12 +3,13 @@
   grid-template-rows: auto var(--grid-item-size) auto;
   grid-template-areas:
     "header"
-    "main";
+    "main"
+    "footer";
   place-content: center;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(to right bottom, var(--dark), transparent) no-repeat;
+  text-align: center;
 }
 
 .header,
@@ -17,6 +18,7 @@
   display: grid;
   place-self: center;
   width: 100vw;
+  min-width: var(--min-width);
 }
 
 .header {
@@ -30,11 +32,25 @@
 
 .main {
   grid-area: main;
-  padding-bottom: var(--measure-times-six);
+  padding: var(--measure);
+  padding-bottom: var(--measure-double);
 }
 
 .footer {
-  padding: var(--measure-double);
+  grid-area: footer;
+  padding: var(--measure-double) var(--measure);
   background: var(--dark);
   background: linear-gradient(to top, var(--dark), transparent);
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding-bottom: var(--measure-times-six);
+  }
+
+  .main,
+  .footer {
+    padding-left: var(--measure-double);
+    padding-right: var(--measure-double);
+  }
 }

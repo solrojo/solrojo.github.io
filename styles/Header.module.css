@@ -6,7 +6,13 @@
   place-items: center;
   place-content: space-between;
   gap: var(--measure);
-  padding: var(--measure-double) var(--measure);
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--measure);
+    padding-right: var(--measure);
+  }
 }

@@ -3,6 +3,7 @@
 
 
 npm run lint
+npm run stylelint
 
 unset ELECTRON_RUN_AS_NODE
 npm run e2e

@@ -1,5 +1,5 @@
 export type LinkObject = {
-  id: number
+  id: string
   href: string
   text: string
 }

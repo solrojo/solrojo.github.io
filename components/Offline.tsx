@@ -8,15 +8,15 @@ export default () => {
   const nodeRef = useRef(null)
 
   useEffect(() => {
-    const hadleOnline = () => setVisibility(false)
-    const hadleOffline = () => setVisibility(true)
+    const handleOnline = () => setVisibility(false)
+    const handleOffline = () => setVisibility(true)
 
-    window.addEventListener('online', hadleOnline)
-    window.addEventListener('offline', hadleOffline)
+    window.addEventListener('online', handleOnline)
+    window.addEventListener('offline', handleOffline)
 
     return () => {
-      window.removeEventListener('online', hadleOnline)
-      window.removeEventListener('offline', hadleOffline)
+      window.removeEventListener('online', handleOnline)
+      window.removeEventListener('offline', handleOffline)
     }
   }, [])
 

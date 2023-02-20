@@ -21,7 +21,7 @@ const ActionBtn = ({
 ActionBtn.propTypes = {
   disabled: PropTypes.bool,
   withBg: PropTypes.bool,
-  hadler: PropTypes.func,
+  onClick: PropTypes.func,
   children: PropTypes.node.isRequired,
   cssClass: PropTypes.string,
   ariaLabel: PropTypes.string,

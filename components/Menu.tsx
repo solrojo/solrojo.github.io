@@ -15,14 +15,14 @@ const Menu = () => {
 
 
   useEffect(() => {
-    const hadleClickOutside = ({ target }: MouseEvent) => {
+    const handleClickOutside = ({ target }: MouseEvent) => {
       if (isOpened && !nodeRef.current?.contains(target as Node)) {
         setVisibility(false)
       }
     }
 
-    window.addEventListener('click', hadleClickOutside)
-    return () => window.removeEventListener('click', hadleClickOutside)
+    window.addEventListener('click', handleClickOutside)
+    return () => window.removeEventListener('click', handleClickOutside)
   }, [isOpened])
 
   return (

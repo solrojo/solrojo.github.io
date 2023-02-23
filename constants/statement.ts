@@ -2,18 +2,18 @@ import { StatementObject } from '@/constants/types'
 
 const statement: StatementObject = {
   en: {
-    title: 'Stand with Ukraine',
+    title: 'Russians against the war',
     imageClass: 'inmate',
     action: {
-      text: 'u24.gov.ua',
+      text: 'Stand with Ukraine',
       link: 'https://u24.gov.ua'
     }
   },
   ru: {
-    title: 'Нет войне',
+    title: 'Россияне против войны',
     imageClass: 'antiZ',
     action: {
-      text: 'Россия против войны',
+      text: 'Нет войне',
       link: 'https://antiwarcommittee.info'
     }
   }

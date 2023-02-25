@@ -12,6 +12,7 @@ export default () => (
 
       <link rel="preload" as="image" href="/img/bg-mobile.webp" media="(max-width: 480px)" />
       <link rel="preload" as="image" href="/img/bg-desktop.webp" media="(min-width: 481px)" />
+      <meta name="theme-color" content="#02032a"/>
     </Head>
     <body>
       <Main />

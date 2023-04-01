@@ -22,6 +22,6 @@ export type StatementLangObject = {
 }
 
 export type StatementObject = {
+  enabled: boolean
   en: StatementLangObject
-  ru: StatementLangObject
 }

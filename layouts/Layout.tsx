@@ -16,13 +16,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   const [isModalVisible, setModalVisibility] = useState(false)
-  const [statementData, setStatementData] = useState<StatementLangObject>(statement.en)
-
-  useEffect(() => {
-    if (/ru/.test(window.navigator.language)) {
-      setStatementData(statement.ru)
-    }
-  }, [])
+  const [statementData] = useState<StatementLangObject>(statement.en)
 
   return (
     <>
@@ -30,16 +24,17 @@ const Layout = ({ children }: Props) => {
 
       <div className={styles.container}  data-test-id="layout">
         <header className={styles.header} data-test-id="layout-header">
-          <Banner cssClass={styles.banner}>
-            <ActionBtn
-              onClick={() => setModalVisibility(true)}
-              disabled={isModalVisible}
-              ariaLabel="Open modal"
-              testId="open-modal"
-            >
-              {statementData.title}
-            </ActionBtn>
-          </Banner>
+          {statement.enabled
+            ? (<Banner cssClass={styles.banner}>
+                <ActionBtn
+                  onClick={() => setModalVisibility(true)}
+                  disabled={isModalVisible}
+                  ariaLabel="Open modal"
+                  testId="open-modal"
+                >
+                  {statementData.title}
+                </ActionBtn>
+              </Banner>) : null}
           <Header />
         </header>
 

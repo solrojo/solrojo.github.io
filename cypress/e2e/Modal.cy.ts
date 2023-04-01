@@ -1,3 +1,5 @@
+import statement from '@/constants/statement'
+
 describe('Modal', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -8,6 +10,8 @@ describe('Modal', () => {
   })
 
   describe('can be opened and', () => {
+    if (!statement.enabled) return;
+
     beforeEach(()=> {
       cy.get('[data-test-id="banner"]')
         .should('be.visible')

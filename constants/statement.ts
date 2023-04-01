@@ -1,20 +1,13 @@
 import { StatementObject } from '@/constants/types'
 
 const statement: StatementObject = {
+  enabled: false,
   en: {
-    title: 'Russians against the war',
-    imageClass: 'inmate',
+    title: atob('UnVzc2lhbnMgYWdhaW5zdCB0aGUgd2Fy'),
+    imageClass: atob('aW5tYXRl'),
     action: {
-      text: 'Stand with Ukraine',
-      link: 'https://u24.gov.ua'
-    }
-  },
-  ru: {
-    title: 'Россияне против войны',
-    imageClass: 'antiZ',
-    action: {
-      text: 'Нет войне',
-      link: 'https://antiwarcommittee.info'
+      text: atob('U3RhbmQgd2l0aCBVa3JhaW5l'),
+      link: atob('aHR0cHM6Ly91MjQuZ292LnVh')
     }
   }
 }

@@ -1,21 +1,21 @@
 import statement from '@/constants/statement'
 
 describe('Statement', () => {
+  if (!statement.enabled) return;
+
   beforeEach(() => {
     cy.visit('/')
 
-    cy.get('[data-test-id="banner"]')
-      .should('be.visible')
-      .find('[data-test-id="open-modal"]')
-      .should('be.visible')
-      .click()
+    if (statement.enabled) {
+      cy.get('[data-test-id="banner"]')
+        .should('be.visible')
+        .find('[data-test-id="open-modal"]')
+        .should('be.visible')
+        .click()
+    }
   })
 
-  const statementData = (
-    /ru/.test(window.navigator.language)
-      ? statement.ru
-      : statement.en
-  )
+  const statementData = statement.en
 
   it('contain a text', () => {
     cy.get('[data-test-id="statement-text"]')

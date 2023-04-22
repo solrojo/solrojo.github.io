@@ -1,62 +1,26 @@
 .container {
   display: grid;
-  grid-template-rows: auto var(--grid-item-size);
-  place-items: stretch;
-  place-content: stretch;
-  gap: var(--measure);
+  place-items: center;
+  place-content: center;
   height: 100%;
 }
 
 .text {
-  padding: var(--measure);
-  place-self: center;
-  text-align: center;
+  color: #06c;
+  font-size: var(--measure-times-six);
+  animation: text-color 10s ease infinite;
 }
 
-.element {
-  font-size: var(--measure-double);
-  margin-bottom: var(--measure);
-  line-height: 1;
-}
-
-.image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.inmate {
-  background-image: url('/img/inmate.webp');
-}
-
-.antiZ {
-  background-image: url('/img/anti-z.svg');
-  background-size: contain;
-  margin: 0 var(--measure-double) var(--measure-double);
-}
-
-@media (min-width: 768px) {
-  .element {
-    font-size: var(--measure-triple);
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    grid-template-rows: none;
-    grid-template-columns: var(--grid-item-size) var(--grid-item-size);
+@keyframes text-color {
+  0% {
+    color: #06c;
   }
 
-  .text {
-    text-align: left;
-    order: 2;
+  50% {
+    color: #fc0;
   }
 
-  .element {
-    font-size: var(--measure-times-five);
-  }
-
-  .antiZ {
-    margin: 0 var(--measure) var(--measure-double);
+  100% {
+    color: #06c;
   }
 }

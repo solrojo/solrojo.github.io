@@ -10,8 +10,10 @@
     "header"
     "content";
   z-index: 998;
-  background: var(--dark);
-  background: var(--bg-gradient);
+  background: #000;
+
+  /* background: var(--dark);
+  background: var(--bg-gradient); */
 }
 
 .header {

@@ -5,21 +5,15 @@ describe('Modal', () => {
     cy.visit('/')
   })
 
-  it('should not exist by default', () => {
-    cy.get('[data-test-id="modal"]').should('not.exist')
-  })
-
-  describe('can be opened and', () => {
+  it('should exist by default', () => {
     if (!statement.enabled) return;
 
-    beforeEach(()=> {
-      cy.get('[data-test-id="banner"]')
-        .should('be.visible')
-        .find('[data-test-id="open-modal"]')
-        .should('be.visible')
-        .click()
-    })
+    cy.get('[data-test-id="modal"]')
+      .should('exist')
+      .should('be.visible')
+  })
 
+  describe('should', () => {
     it('contain sections', () => {
       cy.get('[data-test-id="modal"]').should('exist').and('be.visible')
       cy.get('[data-test-id="modal-header"]').should('be.visible')

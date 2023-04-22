@@ -4,37 +4,21 @@ import Header from '@/components/Header'
 import Modal from '@/components/Modal'
 import Statement from '@/components/Statement'
 import Offline from '@/components/Offline'
-import { ActionBtn } from '@/components/Action'
-import Banner from '@/components/Banner'
 import styles from '@/styles/Layout.module.css'
 import statement from '@/constants/statement'
-import { StatementLangObject } from '@/constants/types'
 
 type Props = {
   children: ReactNode
 }
 
 const Layout = ({ children }: Props) => {
-  const [isModalVisible, setModalVisibility] = useState(false)
-  const [statementData] = useState<StatementLangObject>(statement.en)
-
+  const [isModalVisible, setModalVisibility] = useState(statement.enabled)
   return (
     <>
       <Offline data-test-id="offline" />
 
       <div className={styles.container}  data-test-id="layout">
         <header className={styles.header} data-test-id="layout-header">
-          {statement.enabled
-            ? (<Banner cssClass={styles.banner}>
-                <ActionBtn
-                  onClick={() => setModalVisibility(true)}
-                  disabled={isModalVisible}
-                  ariaLabel="Open modal"
-                  testId="open-modal"
-                >
-                  {statementData.title}
-                </ActionBtn>
-              </Banner>) : null}
           <Header />
         </header>
 
@@ -49,7 +33,7 @@ const Layout = ({ children }: Props) => {
         opened={isModalVisible}
         onClose={() => setModalVisibility(false)}
       >
-        <Statement data={statementData}/>
+        <Statement />
       </Modal>
     </>
   )

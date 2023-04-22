@@ -1,6 +1,8 @@
 describe('404 page', () => {
   beforeEach(() => {
     cy.visit('/dsfsdf', { failOnStatusCode: false })
+    cy.get('[data-test-id="close-modal"]').click()
+    cy.wait(300)
   })
 
   it('should have a title', () => {

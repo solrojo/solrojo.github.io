@@ -8,8 +8,8 @@ const links: LinkObject[] = [
   },
   {
     id: '921db4d9443d1edbd58eb25394febd55',
-    href: 'mailto:mail@kda.name',
-    text: 'mail@kda.name'
+    href: 'mailto:employment@kda.name',
+    text: 'employment@kda.name'
   },
   {
     id: '035963b147f3b4b278d6dad324c642c6',

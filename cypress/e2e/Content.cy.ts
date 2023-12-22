@@ -8,7 +8,7 @@ describe('Content', () => {
 
     cy.get('h1')
       .should('be.visible')
-      .contains('Dmitri Korchemkin', { matchCase: false })
+      .contains('Dmitrii Korchemkin', { matchCase: false })
 
     cy.contains('I\'m', { matchCase: false }).should('be.visible')
     cy.get('mark').contains('Front-End Developer', { matchCase: false }).should('be.visible')
@@ -19,11 +19,10 @@ describe('Content', () => {
       .should('have.attr', 'href')
       .should('match', /linkedin.com|krchmkn/)
 
-    // TODO
-    // cy.get('[data-test-id="portrait"]')
-    //   .should('be.visible')
-    //   .and('have.attr', 'src')
-    //   .should('match', /face|webp/)
+    cy.get('[data-test-id="portrait"]')
+      .should('be.visible')
+      .and('have.attr', 'src')
+      .should('match', /kda|jpg/)
   })
 })
 

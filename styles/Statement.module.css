@@ -9,6 +9,7 @@
   color: #06c;
   font-size: var(--measure-times-six);
   animation: text-color 10s ease infinite;
+  text-align: center;
 }
 
 @keyframes text-color {

@@ -4,9 +4,9 @@ import Content from '@/components/Content'
 export default () => (
   <>
     <Head>
-      <title>Dmitri Korchemkin</title>
+      <title>Dmitrii Korchemkin</title>
     </Head>
 
     <Content />
   </>
-)
+);

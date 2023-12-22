@@ -9,7 +9,6 @@
   display: grid;
   place-items: center;
   place-content: center;
-  order: 2;
 }
 
 .actionContainer {
@@ -55,9 +54,9 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .container {
-    /* grid-template-columns: var(--grid-item-size) var(--grid-item-size); */
+    grid-template-columns: var(--grid-item-size) var(--grid-item-size);
     place-items: center;
     place-content: center;
     text-align: left;
@@ -71,7 +70,4 @@
     width: 80%;
   }
 
-  .image {
-    transform: rotate(10deg);
-  }
 }

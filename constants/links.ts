@@ -12,11 +12,6 @@ const links: LinkObject[] = [
     text: 'employment@kda.name'
   },
   {
-    id: '035963b147f3b4b278d6dad324c642c6',
-    href: 'https://t.me/solrojo',
-    text: 'Telegram'
-  },
-  {
     id: 'bf215181b5140522137b3d4f6b73544a',
     href: 'https://github.com/krchmkn',
     text: 'Github'

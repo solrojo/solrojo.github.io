@@ -12,7 +12,7 @@ export default () => (
         className={styles.image}
         priority
         data-test-id="logo"
-      />🇺🇦
+      />&nbsp;🇺🇦
     </Link>
   </div>
 )

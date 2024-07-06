@@ -1,62 +1,56 @@
-import links from '@/constants/links'
+import links from "@/constants/links";
 
-describe('Menu', () => {
+describe("Menu", () => {
   beforeEach(() => {
-    cy.visit('/')
-    cy.get('[data-test-id="close-modal"]').click()
-    cy.wait(300)
-  })
+    cy.visit("/");
+    cy.get('[data-test-id="close-modal"]').click();
+    cy.wait(300);
+  });
 
-  it('should not exist by default', () => {
-    cy.get('[data-test-id="menu"]').should('not.exist')
-  })
+  it("should not exist by default", () => {
+    cy.get('[data-test-id="menu"]').should("not.exist");
+  });
 
-  describe('can be opened and', () => {
-    beforeEach(()=> {
-      cy.get('[data-test-id="open-menu"]')
-        .should('be.visible')
-        .click()
+  describe("can be opened and", () => {
+    beforeEach(() => {
+      cy.get('[data-test-id="open-menu"]').should("be.visible").click();
 
-      cy.wait(300)
-    })
+      cy.wait(300);
+    });
 
-    it('contain elements', () => {
+    it("contain elements", () => {
       cy.get('[data-test-id="menuitem"]')
-        .should('have.length.least', 1)
+        .should("have.length.least", 1)
         .each((el, index) => {
-          expect(el).be.visible
+          expect(el).be.visible;
 
-          const link = el.find('a');
-          expect(link).be.visible
-          expect(link.text()).equal(links[index].text)
-          expect(link.attr('href')).equal(links[index].href)
-        })
-    })
+          const link = el.find("a");
+          expect(link).be.visible;
+          expect(link.text()).equal(links[index].text);
+          expect(link.attr("href")).equal(links[index].href);
+        });
+    });
 
-    it('can be closed', () => {
+    it("can be closed", () => {
       cy.get('[data-test-id="close-icon"]')
-        .should('be.visible')
-        .and('have.attr', 'src')
-        .should('match', /burger|svg/)
+        .should("be.visible")
+        .and("have.attr", "src")
+        .should("match", /burger|svg/);
 
-      cy.get('[data-test-id="close-menu"]')
-        .should('be.visible')
-        .click()
+      cy.get('[data-test-id="close-menu"]').should("be.visible").click();
 
-      cy.get('[data-test-id="menu"]').should('not.exist')
-    })
+      cy.get('[data-test-id="menu"]').should("not.exist");
+    });
 
-    it('can\'t be closed by click inside', () => {
-      cy.get('[data-test-id="menu"]')
-        .click('topLeft')
-        .should('be.visible')
-    })
+    it("can't be closed by click inside", () => {
+      cy.get('[data-test-id="menu"]').click("topLeft").should("be.visible");
+    });
 
-    it('can be closed by click outside', () => {
-      cy.get('h1').click('topLeft')
-      cy.get('[data-test-id="menu"]').should('not.exist')
-    })
-  })
-})
+    it("can be closed by click outside", () => {
+      cy.get("h1").click("topLeft");
+      cy.get('[data-test-id="menu"]').should("not.exist");
+    });
+  });
+});
 
-export {}
+export {};

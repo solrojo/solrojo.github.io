@@ -3,16 +3,19 @@
   place-items: center;
   place-content: center;
   height: 100%;
+  padding: var(--measure);
 }
 
 .text {
-  color: #06c;
-  font-size: var(--measure-times-six);
-  animation: text-color 10s ease infinite;
+/* color: #06c; */
+  font-size: var(--measure-double);
+
+  /* animation: text-color 10s ease infinite; */
+  text-transform: none;
   text-align: center;
 }
 
-@keyframes text-color {
+/* @keyframes text-color {
   0% {
     color: #06c;
   }
@@ -25,3 +28,5 @@
     color: #06c;
   }
 }
+
+*/

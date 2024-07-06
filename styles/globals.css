@@ -16,10 +16,12 @@
   --half-second: calc(var(--second) / 2);
   --font-size: 16px;
   --grid-item-size: 1fr;
-  --letter-spacing: .1rem;
+  --letter-spacing: 0.1rem;
   --line-height: 1.4;
-  --bg-gradient: linear-gradient(-190deg, var(--dark) 70%, var(--accent)) no-repeat;
-  --gradient: linear-gradient(to right, transparent, var(--dark), transparent) no-repeat;
+  --bg-gradient: linear-gradient(-190deg, var(--dark) 70%, var(--accent))
+    no-repeat;
+  --gradient: linear-gradient(to right, transparent, var(--dark), transparent)
+    no-repeat;
   --min-width: 350px;
 }
 
@@ -54,11 +56,15 @@ body {
 }
 
 @media (max-width: 480px) {
-  body { background-image: url('/img/bg-mobile.webp'); }
+  body {
+    background-image: url("/img/bg-mobile.webp");
+  }
 }
 
 @media (min-width: 481px) {
-  body { background-image: url('/img/bg-desktop.webp'); }
+  body {
+    background-image: url("/img/bg-desktop.webp");
+  }
 }
 
 h1 {

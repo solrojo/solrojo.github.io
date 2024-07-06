@@ -1,6 +1,6 @@
-import links from '@/constants/links'
-import { ActionLinkExternal } from '@/components/Action'
-import styles from '@/styles/Content.module.css'
+import links from "@/constants/links";
+import { ActionLinkExternal } from "@/components/Action";
+import styles from "@/styles/Content.module.css";
 import Image from "next/image";
 import face from "../public/img/kda.jpg";
 

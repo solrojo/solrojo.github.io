@@ -1,24 +1,24 @@
-import { useState, useEffect, useRef } from 'react'
-import { CSSTransition } from 'react-transition-group'
-import Banner from '@/components/Banner'
-import styles from '@/styles/Offline.module.css'
+import { useState, useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
+import Banner from "@/components/Banner";
+import styles from "@/styles/Offline.module.css";
 
 export default () => {
-  const [isVisible, setVisibility] = useState(false)
-  const nodeRef = useRef(null)
+  const [isVisible, setVisibility] = useState(false);
+  const nodeRef = useRef(null);
 
   useEffect(() => {
-    const handleOnline = () => setVisibility(false)
-    const handleOffline = () => setVisibility(true)
+    const handleOnline = () => setVisibility(false);
+    const handleOffline = () => setVisibility(true);
 
-    window.addEventListener('online', handleOnline)
-    window.addEventListener('offline', handleOffline)
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
 
     return () => {
-      window.removeEventListener('online', handleOnline)
-      window.removeEventListener('offline', handleOffline)
-    }
-  }, [])
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
 
   return (
     <CSSTransition
@@ -30,7 +30,7 @@ export default () => {
         enterActive: styles.enterActive,
         enterDone: styles.enterDone,
         exit: styles.exit,
-        exitActive: styles.exitActive
+        exitActive: styles.exitActive,
       }}
       unmountOnExit
     >
@@ -38,5 +38,5 @@ export default () => {
         <Banner>Looks like we&apos;re offline</Banner>
       </div>
     </CSSTransition>
-  )
-}
+  );
+};

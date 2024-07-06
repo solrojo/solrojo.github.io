@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import styles from '@/styles/Logo.module.css'
-import logo from '../public/img/logo.svg'
+import Link from "next/link";
+import Image from "next/image";
+import styles from "@/styles/Logo.module.css";
+import logo from "../public/img/logo.svg";
 
 export default () => (
   <div className={styles.container}>
@@ -12,7 +12,8 @@ export default () => (
         className={styles.image}
         priority
         data-test-id="logo"
-      />&nbsp;🇺🇦
+      />
+      &nbsp;🇺🇦
     </Link>
   </div>
-)
+);

@@ -1,29 +1,28 @@
-import { useState, useRef, useEffect } from 'react'
-import { CSSTransition } from 'react-transition-group'
-import links from '@/constants/links'
-import List from '@/components/List'
-import { ActionBtn } from '@/components/Action'
-import styles from '@/styles/Menu.module.css'
-import Image from 'next/image'
-import burger from '../public/img/burger.svg'
-import CloseIcon from '@/components/CloseIcon'
+import { useState, useRef, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
+import links from "@/constants/links";
+import List from "@/components/List";
+import { ActionBtn } from "@/components/Action";
+import styles from "@/styles/Menu.module.css";
+import Image from "next/image";
+import burger from "../public/img/burger.svg";
+import CloseIcon from "@/components/CloseIcon";
 
 const Menu = () => {
-  const [isVisible, setVisibility] = useState(false)
-  const [isOpened, setOpen] = useState(false)
-  const nodeRef = useRef<HTMLElement>(null)
-
+  const [isVisible, setVisibility] = useState(false);
+  const [isOpened, setOpen] = useState(false);
+  const nodeRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleClickOutside = ({ target }: MouseEvent) => {
       if (isOpened && !nodeRef.current?.contains(target as Node)) {
-        setVisibility(false)
+        setVisibility(false);
       }
-    }
+    };
 
-    window.addEventListener('click', handleClickOutside)
-    return () => window.removeEventListener('click', handleClickOutside)
-  }, [isOpened])
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, [isOpened]);
 
   return (
     <>
@@ -51,7 +50,7 @@ const Menu = () => {
           enterActive: styles.enterActive,
           enterDone: styles.enterDone,
           exit: styles.exit,
-          exitActive: styles.exitActive
+          exitActive: styles.exitActive,
         }}
         unmountOnExit
         onEntered={() => setOpen(true)}
@@ -83,7 +82,7 @@ const Menu = () => {
         </nav>
       </CSSTransition>
     </>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

@@ -1,19 +1,19 @@
-import { ReactNode } from 'react'
-import PropTypes from 'prop-types'
-import { useRef } from 'react'
-import { CSSTransition } from 'react-transition-group'
-import { ActionBtn } from '@/components/Action'
-import styles from '@/styles/Modal.module.css'
-import CloseIcon from '@/components/CloseIcon'
+import { ReactNode } from "react";
+import PropTypes from "prop-types";
+import { useRef } from "react";
+import { CSSTransition } from "react-transition-group";
+import { ActionBtn } from "@/components/Action";
+import styles from "@/styles/Modal.module.css";
+import CloseIcon from "@/components/CloseIcon";
 
 type Props = {
-  opened: boolean
-  onClose: Function
-  children: ReactNode
-}
+  opened: boolean;
+  onClose: Function;
+  children: ReactNode;
+};
 
 const Modal = ({ opened, onClose, children }: Props) => {
-  const nodeRef = useRef(null)
+  const nodeRef = useRef(null);
 
   return (
     <>
@@ -26,7 +26,7 @@ const Modal = ({ opened, onClose, children }: Props) => {
           enterActive: styles.enterActive,
           enterDone: styles.enterDone,
           exit: styles.exit,
-          exitActive: styles.exitActive
+          exitActive: styles.exitActive,
         }}
         unmountOnExit
       >
@@ -36,10 +36,7 @@ const Modal = ({ opened, onClose, children }: Props) => {
           role="dialog"
           data-test-id="modal"
         >
-          <div
-            className={styles.header}
-            data-test-id="modal-header"
-          >
+          <div className={styles.header} data-test-id="modal-header">
             <ActionBtn
               onClick={() => onClose()}
               ariaLabel="Close modal"
@@ -49,22 +46,19 @@ const Modal = ({ opened, onClose, children }: Props) => {
             </ActionBtn>
           </div>
 
-          <div
-            className={styles.content}
-            data-test-id="modal-content"
-          >
-            { children }
+          <div className={styles.content} data-test-id="modal-content">
+            {children}
           </div>
         </div>
       </CSSTransition>
     </>
-  )
-}
+  );
+};
 
 Modal.propTypes = {
   opened: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};
 
-export default Modal
+export default Modal;

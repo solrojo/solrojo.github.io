@@ -9,7 +9,7 @@
     "lint": "next lint",
     "stylelint": "npx stylelint '**/styles/**/*.css'",
     "export": "next export",
-    "prepare": "husky install",
+    "prepare": "husky husky",
     "test": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e --browser chrome\"",
     "e2e": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e --headless\""
   },
@@ -19,24 +19,23 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@next/font": "^13.1.4",
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
-    "eslint": "8.32.0",
-    "eslint-config-next": "13.1.4",
-    "next": "^13.5.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.4",
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-transition-group": "^4.4.5",
-    "typescript": "4.9.4"
+    "typescript": "^5.5.0"
   },
   "devDependencies": {
-    "@types/react-transition-group": "^4.4.5",
-    "cypress": "^13.6.1",
-    "husky": "^8.0.3",
-    "start-server-and-test": "^2.0.3",
-    "stylelint": "^15.1.0",
-    "stylelint-config-standard": "^30.0.1"
+    "@types/react-transition-group": "^4.4.10",
+    "cypress": "^13.13.0",
+    "husky": "^9.0.11",
+    "start-server-and-test": "^2.0.4",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.1"
   }
 }

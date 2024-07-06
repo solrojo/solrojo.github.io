@@ -10,7 +10,7 @@
 }
 
 .element:active {
-  transform: scale3d(.95, .95, .95);
+  transform: scale3d(0.95, 0.95, 0.95);
 }
 
 @media (prefers-reduced-motion: reduce) {

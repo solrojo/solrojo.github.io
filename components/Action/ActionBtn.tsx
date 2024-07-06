@@ -1,22 +1,28 @@
-import PropTypes from 'prop-types'
-import styles from '@/styles/Action.module.css'
-import { ActionBtnProps } from '@/components/Action/constants'
+import PropTypes from "prop-types";
+import styles from "@/styles/Action.module.css";
+import { ActionBtnProps } from "@/components/Action/constants";
 
 const ActionBtn = ({
-  disabled, withBg, cssClass, onClick, children, ariaLabel, testId
+  disabled,
+  withBg,
+  cssClass,
+  onClick,
+  children,
+  ariaLabel,
+  testId,
 }: ActionBtnProps) => (
   <button
     type="button"
-    className={`${styles.element} ${withBg ? styles.elementWithBg : ''} ${cssClass ? cssClass : ''}`}
+    className={`${styles.element} ${withBg ? styles.elementWithBg : ""} ${cssClass ? cssClass : ""}`}
     disabled={disabled}
     onClick={() => onClick?.()}
     role="button"
     aria-label={ariaLabel}
     data-test-id={testId}
   >
-    { children }
+    {children}
   </button>
-)
+);
 
 ActionBtn.propTypes = {
   disabled: PropTypes.bool,
@@ -25,7 +31,7 @@ ActionBtn.propTypes = {
   children: PropTypes.node.isRequired,
   cssClass: PropTypes.string,
   ariaLabel: PropTypes.string,
-  testId: PropTypes.string
-}
+  testId: PropTypes.string,
+};
 
-export default ActionBtn
+export default ActionBtn;

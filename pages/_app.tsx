@@ -1,14 +1,14 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Layout from '@/layouts/Layout'
-import { Montserrat as GoogleFont }from '@next/font/google'
-import Script from 'next/script'
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import Layout from "@/layouts/Layout";
+import { Montserrat as GoogleFont } from "next/font/google";
+import Script from "next/script";
 
 const font = GoogleFont({
-  weight: '300',
-  subsets: ['latin'],
-  fallback: ['Helvetica', 'sans-serif']
-})
+  weight: "300",
+  subsets: ["latin"],
+  fallback: ["Helvetica", "sans-serif"],
+});
 
 export default ({ Component, pageProps }: AppProps) => (
   <>
@@ -28,4 +28,4 @@ export default ({ Component, pageProps }: AppProps) => (
       </Layout>
     </div>
   </>
-)
+);

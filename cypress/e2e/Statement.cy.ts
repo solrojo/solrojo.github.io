@@ -1,16 +1,15 @@
-import statement from '@/constants/statement'
+import statement from "@/constants/statement";
 
-describe('Statement', () => {
+describe("Statement", () => {
   if (!statement.enabled) return;
 
   beforeEach(() => {
-    cy.visit('/')
-  })
+    cy.visit("/");
+  });
 
-  it('contain a text', () => {
-    cy.get('[data-test-id="statement-text"]')
-      .should('be.visible')
-  })
-})
+  it("contain a text", () => {
+    cy.get('[data-test-id="statement-text"]').should("be.visible");
+  });
+});
 
-export {}
+export {};

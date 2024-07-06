@@ -1,7 +1,7 @@
-import { StatementObject } from '@/constants/types'
+import { StatementObject } from "@/constants/types";
 
 const statement: StatementObject = {
-  enabled: true
-}
+  enabled: true,
+};
 
-export default statement
+export default statement;

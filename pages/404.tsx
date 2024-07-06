@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { ActionLink } from '@/components/Action'
+import Head from "next/head";
+import { ActionLink } from "@/components/Action";
 
 export default () => (
   <>
@@ -9,7 +9,9 @@ export default () => (
 
     <section>
       <h1 className="mb-2vw">Page not found</h1>
-      <ActionLink href="/" withBg>Go to main page</ActionLink>
+      <ActionLink href="/" withBg>
+        Go to main page
+      </ActionLink>
     </section>
   </>
-)
+);

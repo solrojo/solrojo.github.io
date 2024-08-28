@@ -2,7 +2,7 @@
   --dark: #02032a;
   --light: #fff;
   --accent: #f20c43;
-  --measure: 1rem;
+  --measure: 0.8rem;
   --measure-half: calc(var(--measure) / 2);
   --measure-one-n-half: calc(var(--measure) * 1.5);
   --measure-two-n-half: calc(var(--measure) * 2.5);
